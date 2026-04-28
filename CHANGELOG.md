@@ -7,7 +7,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-<!-- New entries land here between releases. Move into a versioned section at release time. -->
+### Fixed
+
+- Missed dogfooding-fairness sanitization in `generation-rules.md` qualifier-construction example (line 158). Replaced "The Undeclared Builder" with "The Providing Stranger" to match the Carlos-derived calibration examples elsewhere in the file. Caught when re-scanning after a cross-machine merge surfaced the leak.
 
 ## [0.1.0] - 2026-04-27
 

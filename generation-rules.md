@@ -155,7 +155,7 @@ e.g. "The Providing Stranger," "The Rehearsing Starter," "The Quiet Operator"
 1. **It's a HANDLE, not a verdict.** The user can accept, reject, or rename. Do not write it as if final.
 2. **3-5 words max.** Short enough to hold in one breath.
 3. **Captures the tension, not just the strength.** A good archetype reveals the interplay between their signature AND leak, not one or the other.
-4. **Uses a qualifier that's specific, not generic.** "The Undeclared Builder" beats "The Builder." "The Rehearsing Starter" beats "The Beginner."
+4. **Uses a qualifier that's specific, not generic.** "The Providing Stranger" beats "The Provider." "The Rehearsing Starter" beats "The Beginner."
 5. **Barnum-calibrated.** Sticky enough that they'll remember it. Specific enough that it couldn't apply to 80% of people.
 
 #### Construction method
