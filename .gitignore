@@ -1,0 +1,48 @@
+# claude-self-portrait-sessions — .gitignore
+# Sourced from: life-os/workflows/templates/public-release-gitignore (Playbook variant)
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- Env / secrets ---
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials.json
+secrets.json
+.aws/
+.ssh/
+
+# --- Claude / AI tool caches ---
+.claude/settings.local.json
+.claude/cache/
+.anthropic/
+.cursor/
+
+# --- User-generated session data (Forward-look) ---
+# When you run a session, Claude creates files in these directories with
+# YOUR personal answers. They live in YOUR local clone only — never push.
+# Gitignored so a `git add .` won't accidentally stage your private data.
+sessions/
+feedback/
+users/
+outputs/
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Local override (always last) ---
+*.local
+local-*
