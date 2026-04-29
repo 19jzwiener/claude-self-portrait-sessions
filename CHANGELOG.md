@@ -5,6 +5,9 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+> Pre-1.0 = API may change. Versions follow `0.MINOR.PATCH`.
+> Per SemVer for 0.x: breaking changes bump MINOR (`0.1.0 → 0.2.0`), backward-compatible fixes bump PATCH.
+
 ## [Unreleased]
 
 ### Fixed
@@ -23,3 +26,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Sample session walkthrough (`examples/sample-session-carlos.md`) — fictional Carlos Mendez persona (48-year-old construction foreman) showing a complete session with iteration notes.
 - MIT license.
 - Read-only `git pull` update strategy. Personal session outputs (`sessions/`, `feedback/`, `users/`, `outputs/`) gitignored from upstream so contributors don't accidentally PR their personal data.
+
+[Unreleased]: https://github.com/19jzwiener/claude-self-portrait-sessions/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/19jzwiener/claude-self-portrait-sessions/releases/tag/v0.1.0
