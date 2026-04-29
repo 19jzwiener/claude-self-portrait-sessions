@@ -1,14 +1,14 @@
 # claude-self-portrait-sessions
 
-> A 15-minute self-discovery session you run with Claude Code. Walk away with a one-page profile of who you are right now — in your own words.
+> A 30-minute self-discovery session you run with Claude Code. Walk away with a one-page profile of who you are right now — in your own words.
 
 **Want more context first?** See the [Session 1 preview page](https://life-os-preview.netlify.app/session-1-preview.html) for what the session is + what you walk away with + how it fits into a longer journey.
 
 ## What this is
 
-Six questions, fifteen minutes, with Claude as the session runner. You answer in your own words. Claude reads them back to you, helps you write your two sentences, names the pattern that throws you off, offers three vectors for what to do next, and ends with one negative surprise that's hard to ignore.
+Six questions, around thirty minutes, with Claude as the session runner. You answer in your own words. Claude reads them back to you, helps you write your two sentences, names the pattern that throws you off, offers three directions you could take next, and ends with one observation that's hard to ignore.
 
-You leave with a one-page profile: Your Name (a 3-5 word handle for who you are right now), your two sentences, your named pattern, your next move (locked in as a WOOP if-then commitment), checkpoint dates, and three open questions for next time.
+You leave with a one-page profile: Your Name (a 3-5 word handle for who you are right now), your two sentences, your named pattern, your next move (with a specific trigger so you actually do it), checkpoint dates, and three open questions for next time.
 
 **Who it's for:** Anyone who wants to say something true about themselves they've been half-knowing for a while — not a personality test, not coaching, not therapy. A structured self-portrait.
 
@@ -22,7 +22,7 @@ cd claude-self-portrait-sessions
 claude
 ```
 
-That's it. Claude reads `CLAUDE.md`, becomes the Session Runner, and starts the session by asking your first name. Block 15 uninterrupted minutes.
+That's it. Claude reads `CLAUDE.md`, becomes the Session Runner, and starts the session by asking your first name. Block 30 uninterrupted minutes.
 
 ## What you get
 
@@ -31,7 +31,7 @@ That's it. Claude reads `CLAUDE.md`, becomes the Session Runner, and starts the 
 | **Your Name** | A 3-5 word handle that captures both your strength and your tension. You can keep it, rename it, or reject it. |
 | **Two Sentences** | Two of your own sentences: "I come alive when ___" and "I drift when ___". |
 | **Pattern** | A named character (you name it) — what it does to you, and when it loses power. |
-| **Vector** | One of three paths you can take, locked in as a WOOP if-then commitment with a real trigger. |
+| **Vector** | One of three paths you can take, written as a concrete next step with a specific moment that triggers it. |
 | **Negative Surprise** | One sentence using your own vocabulary, naming a pattern that's hard to see from the inside. |
 | **Checkpoints** | Two real calendar dates (stretch + fair) for your next move. |
 | **Three Gap Questions** | Open questions specific to your session, designed to compound into Session 2 if you come back. |
