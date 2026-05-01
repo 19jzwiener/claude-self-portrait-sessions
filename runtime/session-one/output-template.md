@@ -1,15 +1,18 @@
-# Output Template — Session 1 Profile
+# Output Template — Session 1 Profile *(V2)*
 
-> The one-page artifact the user walks away with. Copy this template into the session file and fill each field with the user's data + your generated content.
+> The one-page profile the user walks away with. Copy this template into the session file and fill each field with the user's data + your generated content.
+>
+> **V2 changes (2026-04-28):** "Artifact" dropped from user-facing copy (Anita 2026-04-22 didn't know the word). Internal team docs/files keep "artifact"; user-facing copy uses "profile" or "profile page." **Term rename:** the 3-5 word handle is now called **"Your Name"** (was "archetype/signature"; locked via 3-mentor gate 2026-04-28 — Tony's verdict). Your Name no longer offers user-rename — see V2 Screen 13 in script for the "does this sound right?" + reasons-it-doesn't-fit flow.
 
 ---
 
-## The Artifact
+## The Profile Page
 
 ```
 ┌──────────────────────────────────────────────────┐
 │  [YOUR NAME — the one I gave you]                 │
-│  (you can keep it, change it, or say no to it)    │
+│  (does this sound right? — if not, write the      │
+│   reasons it feels off; we'll work on it in S2)   │
 │                                                   │
 │  YOUR SENTENCES                                   │
 │  "I come alive when [user's Screen 7 answer]."   │
@@ -58,7 +61,7 @@
 
 ## [YOUR NAME]
 
-*(you can keep it, change it, or say no to it)*
+*(does this sound right? — if it doesn't quite hit, write down the reasons it feels off and we'll figure out a better fit in Session 2)*
 
 ### Your Sentences
 > I come alive when [user's Screen 7 answer].
@@ -99,7 +102,7 @@
 
 | Field | Source | Length | Style |
 |-------|--------|--------|-------|
-| Archetype Name | Generated — Screen 13 | 3-5 words | Noun phrase with a qualifier ("The [Qualifier] [Identity]") |
+| Your Name (handle) | Generated — Screen 13 | 3-5 words | Noun phrase with a qualifier ("The [Qualifier] [Identity]") |
 | Signature | User — Screen 7 | 2 sentences | First-person, user's exact words |
 | Leak | User — Screen 8 | 2 sentences | Uses character name from Screen 4 |
 | Vector | User + Runner — Screen 9-10 | 1 line title + WOOP | IF/THEN structure |

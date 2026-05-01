@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Page About You — {{USER_NAME}}</title>
+<!--
+  TEMPLATE INSTRUCTIONS
+  =====================
+  Reusable HTML template for Session 1 shareable artifacts.
+  Design rationale: see `artifact-cleanup-guide.md`.
+  Research basis: see `../../shareable/_research-notes.md` (Agent A findings on
+  keepsake-artifact design — Charter serif, Manila Folder palette with plum
+  introspection accent, 640px column, pull-quote on user's own words,
+  certificate-weight inner border, left-border color tagging).
+
+  Placeholders to replace (all in {{UPPERCASE}} format):
+    {{USER_NAME}}             — first name only (e.g., "Anita")
+    {{DATE_LONG}}             — month name + day + year (e.g., "April 22, 2026")
+    {{ARCHETYPE}}              — The [Qualifier] [Identity] from Screen 13
+    {{SIGNATURE_ALIVE}}       — "I come alive when..." from Screen 7
+    {{SIGNATURE_DRIFT}}       — "I drift when..." from Screen 7
+    {{CHARACTER_NAME}}        — the name user gave their pattern (Screen 4)
+    {{CHARACTER_GLOSS}}       — plain-words gloss of the character, drawn from user's own Screen 4 description
+    {{LEAK_DOES}}             — from Screen 8
+    {{LEAK_LOSES_POWER}}      — from Screen 8
+    {{VECTOR_TITLE}}          — chosen option title from Screen 9 (plain, no metaphor-only names)
+    {{VECTOR_DESCRIPTION}}    — 1-sentence description of the chosen path
+    {{WOOP_PLAN}}             — full plan paragraph from Screen 10
+    {{CADENCE_LINE}}          — ONE of:
+                                  "This is a daily thing — one morning at a time."
+                                  "This is a weekly thing — one [X] per week."
+                                  "This is a one-time move — done once this week."
+    {{SURPRISE_TEXT}}         — the LANDED version from Screen 12 (not earlier drafts)
+    {{SURPRISE_ADDITION}}     — user's response/extension after the surprise (omit the whole div if they had none)
+    {{CHECKIN_LABEL_1}}       — "One-week check" for daily/weekly; "Check-in date" for one-shot
+    {{CHECKIN_DATE_1}}        — long date (e.g., "April 29, 2026")
+    {{CHECKIN_DESC_1}}        — cadence-appropriate description
+    {{CHECKIN_LABEL_2}}       — "Two-week check" (only for daily/weekly; omit the whole li for one-shot)
+    {{CHECKIN_DATE_2}}        — long date
+    {{CHECKIN_DESC_2}}        — cadence-appropriate description
+    {{GAP_QUESTION_1}}        — from Screen 13
+    {{GAP_QUESTION_2}}        — from Screen 13
+    {{GAP_QUESTION_3}}        — from Screen 13
+    {{SURPRISED_BY}}          — user's answer to "what surprised you today?" (omit whole section if skipped)
+
+  Conditional sections:
+    - If no surprise addition → remove the <div class="surprise-addition">...</div> block
+    - If cadence is one-shot → remove the second <li> in the check-in list
+    - If user skipped the "what surprised you today" question → remove the entire "What Surprised You" <section>
+-->
+<style>
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    color: #2a241d;
+    background: #f5f0e6;
+    margin: 0;
+    padding: 3rem 1.5rem;
+    font-weight: 400;
+  }
+  .page {
+    max-width: 640px;
+    margin: 0 auto;
+    background: #fbf8f1;
+    padding: 3.75rem 3.25rem;
+    border: 1px solid #e0d6c3;
+    box-shadow: 0 2px 4px rgba(60, 40, 20, 0.06);
+    position: relative;
+  }
+  /* Certificate-weight inner border — signals "done document, not web page" */
+  .page::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    border: 1px solid #e8ddc6;
+    pointer-events: none;
+  }
+  .page-inner {
+    position: relative;
+    z-index: 1;
+  }
+  .header {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e0d6c3;
+    margin-bottom: 2.5rem;
+  }
+  .header h1 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin: 0 0 0.4rem 0;
+    color: #2a241d;
+  }
+  .header .date {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8b6f47;
+    margin: 0;
+    font-weight: 500;
+  }
+  .opener {
+    color: #4a3f33;
+    margin: 0 0 3rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .archetype {
+    text-align: center;
+    margin: 3rem 0 3rem 0;
+    padding: 2.25rem 1.25rem;
+    background: #f0e9d8;
+    border-top: 1px solid #d9c9a8;
+    border-bottom: 1px solid #d9c9a8;
+  }
+  .archetype h2 {
+    font-family: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, Georgia, serif;
+    font-size: 2.1rem;
+    font-weight: 600;
+    margin: 0 0 0.75rem 0;
+    color: #2a241d;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .archetype .keep-note {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-style: italic;
+    font-size: 0.88rem;
+    color: #6b5a45;
+    margin: 0;
+  }
+  section {
+    margin: 2.75rem 0;
+  }
+  section h3 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8b6f47;
+    margin: 0 0 1.25rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e0d6c3;
+  }
+  /* Pull-quote treatment for the user's own two sentences — the highest-value
+     trust anchor on the page per keepsake research (verbatim user words drive
+     perceived customization, which drives keepability). */
+  .pull-quote {
+    font-size: 1.5rem;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #2a241d;
+    margin: 1.5rem 0;
+    padding: 0 1rem;
+    text-align: left;
+  }
+  .pull-quote p {
+    margin: 0.75rem 0;
+  }
+  .pull-quote p:first-child { margin-top: 0; }
+  .pull-quote p:last-child { margin-bottom: 0; }
+  .gloss {
+    font-style: italic;
+    color: #6b5a45;
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.55;
+  }
+  .sub-label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #5a4a38;
+    margin: 1.5rem 0 0.5rem 0;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  blockquote {
+    margin: 0.5rem 0 1.25rem 0;
+    padding: 0.35rem 0 0.35rem 1.25rem;
+    border-left: 3px solid #c9b896;
+    color: #2a241d;
+    font-size: 1.05rem;
+    line-height: 1.55;
+  }
+  blockquote p { margin: 0.5rem 0; }
+  blockquote p:first-child { margin-top: 0; }
+  blockquote p:last-child { margin-bottom: 0; }
+  /* Introspection sections use plum left-border accent — the one non-tan
+     color on the page, used deliberately on sections that invite inward
+     attention (the surprise, the gap questions). */
+  section.introspection h3 {
+    color: #6b4a7a;
+  }
+  section.introspection blockquote {
+    border-left-color: #a88ebf;
+  }
+  .plan {
+    background: #f0e9d8;
+    padding: 1.25rem 1.5rem;
+    margin: 1rem 0;
+    border-left: 3px solid #8b6f47;
+  }
+  .plan p { margin: 0.5rem 0; line-height: 1.55; }
+  .plan p:first-child { margin-top: 0; }
+  .plan p:last-child { margin-bottom: 0; }
+  .cadence {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-size: 0.85rem;
+    color: #8b6f47;
+    margin-top: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .surprise-addition {
+    margin-top: 1.5rem;
+    padding: 1rem 1.25rem;
+    background: #f0e9d8;
+    border-left: 3px solid #a88ebf;
+    font-style: italic;
+    color: #4a3f33;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .checkin-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .checkin-list li {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid #e8ddc6;
+    line-height: 1.55;
+  }
+  .checkin-list li:last-child { border-bottom: none; }
+  .checkin-list .label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    font-weight: 600;
+    color: #2a241d;
+    font-size: 0.92rem;
+  }
+  .checkin-list .cdate {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui, sans-serif;
+    color: #8b6f47;
+    font-weight: 600;
+    font-size: 0.92rem;
+  }
+  .questions-intro {
+    font-style: italic;
+    color: #4a3f33;
+    margin: 0 0 1.25rem 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+  }
+  .questions-list {
+    padding-left: 1.25rem;
+    margin: 0;
+  }
+  .questions-list li {
+    margin: 0.95rem 0;
+    padding-left: 0.5rem;
+    line-height: 1.55;
+  }
+  .footer {
+    margin-top: 4rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0d6c3;
+    font-style: italic;
+    font-size: 0.88rem;
+    color: #8b6f47;
+    text-align: center;
+  }
+  .footer p { margin: 0.5rem 0; line-height: 1.5; }
+  .footer p:first-child { margin-top: 0; }
+  .footer p:last-child { margin-bottom: 0; }
+  @media (max-width: 640px) {
+    body { padding: 1rem 0.5rem; font-size: 17px; }
+    .page { padding: 2.25rem 1.5rem; }
+    .page::before { top: 14px; right: 14px; bottom: 14px; left: 14px; }
+    .header h1 { font-size: 1.15rem; }
+    .archetype { padding: 1.75rem 1rem; margin: 2rem 0; }
+    .archetype h2 { font-size: 1.65rem; }
+    .pull-quote { font-size: 1.25rem; padding: 0 0.5rem; }
+  }
+  @media print {
+    body { background: white; padding: 0; font-size: 12pt; }
+    .page {
+      border: 1px solid #d9c9a8;
+      box-shadow: none;
+      padding: 0.5in;
+      max-width: none;
+      background: #fbf8f1 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page::before {
+      border-color: #d9c9a8;
+      top: 0.35in; right: 0.35in; bottom: 0.35in; left: 0.35in;
+    }
+    section { page-break-inside: avoid; }
+    .archetype {
+      background: #f0e9d8 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .plan, .surprise-addition {
+      background: #f0e9d8 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+<article class="page">
+<div class="page-inner">
+
+  <div class="header">
+    <h1>A Page About You — {{USER_NAME}}</h1>
+    <p class="date">{{DATE_LONG}}</p>
+  </div>
+
+  <p class="opener">
+    This is the current view we created of you. It will continue to improve and change in future sessions. Step 1 is done — but there's much more to discover in the sessions ahead.
+  </p>
+
+  <div class="archetype">
+    <h2>{{ARCHETYPE}}</h2>
+    <p class="keep-note">The name we're starting with. It'll keep evolving.</p>
+  </div>
+
+  <section>
+    <h3>Your Two Sentences — In Your Own Words</h3>
+    <div class="pull-quote">
+      <p>&ldquo;{{SIGNATURE_ALIVE}}&rdquo;</p>
+      <p>&ldquo;{{SIGNATURE_DRIFT}}&rdquo;</p>
+    </div>
+  </section>
+
+  <section>
+    <h3>Your Pattern — {{CHARACTER_NAME}}</h3>
+    <p class="gloss">That's the name you gave it — {{CHARACTER_GLOSS}}.</p>
+
+    <p class="sub-label">What it does to you</p>
+    <blockquote>{{LEAK_DOES}}</blockquote>
+
+    <p class="sub-label">When it loses power</p>
+    <blockquote>{{LEAK_LOSES_POWER}}</blockquote>
+  </section>
+
+  <section>
+    <h3>Your Next Step</h3>
+    <p><strong>{{VECTOR_TITLE}}.</strong> {{VECTOR_DESCRIPTION}}</p>
+    <div class="plan">
+      <p><strong>Your plan:</strong> {{WOOP_PLAN}}</p>
+    </div>
+    <p class="cadence">{{CADENCE_LINE}}</p>
+  </section>
+
+  <section class="introspection">
+    <h3>Something to Notice</h3>
+    <p>{{SURPRISE_TEXT}}</p>
+    <div class="surprise-addition">
+      You added: &ldquo;{{SURPRISE_ADDITION}}&rdquo; That's worth keeping.
+    </div>
+  </section>
+
+  <section>
+    <h3>Check-in Dates</h3>
+    <ul class="checkin-list">
+      <li><span class="label">{{CHECKIN_LABEL_1}}:</span> <span class="cdate">{{CHECKIN_DATE_1}}</span> — {{CHECKIN_DESC_1}}</li>
+      <li><span class="label">{{CHECKIN_LABEL_2}}:</span> <span class="cdate">{{CHECKIN_DATE_2}}</span> — {{CHECKIN_DESC_2}}</li>
+      <li><span class="label">If both slip:</span> we sit back down and make the step smaller. No one is going to be mad at you.</li>
+    </ul>
+  </section>
+
+  <section class="introspection">
+    <h3>Questions for Next Time</h3>
+    <p class="questions-intro">These aren't for you to answer now. They're what I'd want to ask you when we meet again.</p>
+    <ul class="questions-list">
+      <li>{{GAP_QUESTION_1}}</li>
+      <li>{{GAP_QUESTION_2}}</li>
+      <li>{{GAP_QUESTION_3}}</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>What Surprised You</h3>
+    <blockquote>{{SURPRISED_BY}}</blockquote>
+  </section>
+
+  <div class="footer">
+    <p>This is Version 1. We'll make it sharper together next time.</p>
+    <p>Everything on this page is subject to change based on your feedback. If something feels off or doesn't fit, <a href="mailto:Joseph.zwiener@outlook.com?subject=Life-OS%20-%20feedback&body=Hi%20Joseph%2C%0A%0AFeedback%20on%20my%20page%3A%0A%0A" style="color: #8b6f47; text-decoration: underline;">tell me</a> — that's how the next version gets sharper.</p>
+  </div>
+
+</div>
+</article>
+</body>
+</html>
