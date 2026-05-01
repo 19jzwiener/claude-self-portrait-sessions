@@ -16,7 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - **`runtime/session-one/`** — Session 1 V2 promoted to public. Refined script (V1 → V2 changes: Screen 0 permission-to-interrupt, Screen 4 split into 3 micro-steps, Screen 6 "last one" drop, Screen 9 vector framing, Screen 12 negative-surprise generation rules, Screen 13 Your Name no-rename rule + reasons-it-feels-off carry-forward, plus 6 more — see commit history for the full list). Same 6-question intake, refined microcopy, validated across 11 pressure-test runs (1 real user + 10 personas).
 - **`users/`** — multi-page profile schema. After Session 1 ends, the Session Runner creates `users/firstname-lastname/` with 7 structured pages (`quick-profile`, `identity`, `pattern`, `language`, `life-context`, `runner-manual`, `system-issues`) plus `sessions/s01-YYYY-MM-DD.md` for the frozen per-session record. The schema lives at `users/.template/`. This is V2's main output upgrade — V1 produced only a single-page artifact; V2 produces the artifact AND a compounding multi-page profile that future sessions can build on.
-- **`session-records/`** — per-run directories. Each session's transcript, feedback, and shareable artifact (HTML/MD/TXT) land in `session-records/YYYY-MM-DD-firstname-lastname/`. Replaces the old V1 layout where these scattered into separate `sessions/`, `feedback/`, and `artifacts/` dirs.
+- **`session-records/`** — per-run directories. Each session's transcript, feedback, and the single cleaned `artifact.md` land in `session-records/YYYY-MM-DD-firstname-lastname/`. Replaces the old V1 layout where these scattered into separate `sessions/`, `feedback/`, and `artifacts/` dirs. Also: dropped the multi-format artifact output (was HTML/MD/TXT in earlier V2 drafts) — single markdown deliverable now, both user and system read the same file.
 - **Skeleton READMEs** in `users/` and `session-records/` documenting where data lands.
 
 ### Changed
@@ -24,12 +24,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **BREAKING — Repo restructure.** Runtime files moved from repo root into `runtime/session-one/` (was `CLAUDE.md`, `session-1-script.md`, `generation-rules.md`, `output-template.md`, `examples/` at root in v0.1.0). Anyone using v0.1.0 paths must update — `cd runtime/session-one` is the new working dir. Top-level now contains repo metadata only: `README.md`, `LICENSE`, `CHANGELOG.md`, `.gitignore`, `runtime/`, `users/`, `session-records/`.
 - **Output paths.** Session output now writes to `../../session-records/YYYY-MM-DD-firstname-lastname/` (transcript + feedback + artifact) and `../../users/firstname-lastname/` (multi-page profile), both relative to `runtime/session-one/`. v0.1.0 wrote to root-level `sessions/`, `feedback/`, `users/{name}.md` (single-file).
 - **`.gitignore`** patterns updated for the new layout — both root-level (`users/firstname-lastname/`, `session-records/`) and runtime-internal (`runtime/session-*/sessions/`, etc.) personal data dirs.
-- Sample session `examples/sample-session-carlos.md` retained from v0.1.0 — still illustrative of the session flow. Note: it shows V1's single-page artifact format; V2 produces the multi-page profile in `users/`. See `users/.template/` for the V2 schema.
+- Sample session `runtime/session-one/examples/sample-session-carlos.md` retained from v0.1.0 — still accurate. The single-page artifact V2 produces matches the format shown there. New in V2: an additional structured profile is written internally to `users/firstname-lastname/` for cross-session compounding (see `users/.template/`).
 
 ### Why
 
 - **Multi-session scaling.** v0.1.0's flat root structure assumed one session. Putting `runtime/session-one/` in front future-proofs for `runtime/session-two/` etc. as the arc grows.
-- **Data architecture upgrade.** V2's multi-page profile is a more honest representation of who someone is than a single page. Each page captures a different dimension; together they compound across sessions instead of being overwritten.
+- **Compounding profile under-the-hood.** The single-page artifact is still the user's deliverable. V2 adds a multi-page structured profile written internally so future sessions can build on what was said before instead of asking again. Each internal page captures a different dimension (identity, pattern, language, life-context); together they compound across sessions instead of getting overwritten.
 - **Mirror parity with private dev environment.** The same `runtime/session-one/` structure exists in Joseph's private dev repo — public users get exactly what gets dogfooded.
 
 ### Fixed

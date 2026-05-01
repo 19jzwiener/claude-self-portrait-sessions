@@ -1,6 +1,6 @@
 # claude-self-portrait-sessions
 
-> A 30-45 minute self-discovery session you run with Claude Code. Walk away with a multi-page profile of who you are right now — in your own words.
+> A 30-45 minute self-discovery session you run with Claude Code. Walk away with a one-page profile of who you are right now — in your own words.
 
 **Want more context first?** See the [Session 1 preview page](https://life-os-preview.netlify.app/session-1-preview.html) for what the session is + what you walk away with + how it fits into a longer journey.
 
@@ -8,7 +8,7 @@
 
 Six questions, around 30-45 minutes, with Claude as the session runner. You answer in your own words. Claude reads them back to you, helps you write your two sentences, names the pattern that throws you off, offers three directions you could take next, and ends with one observation that's hard to ignore.
 
-You leave with a multi-page profile of yourself: Your Name (a 3-5 word handle for who you are right now), your two sentences, your named pattern, your next move (with a specific trigger so you actually do it), checkpoint dates, three open questions for next time, plus structured pages capturing the language you use, life context, and notes for future sessions.
+You leave with a one-page profile: Your Name (a 3-5 word handle for who you are right now), your two sentences, your named pattern, your next move (with a specific trigger so you actually do it), checkpoint dates, and three open questions for next time. Same shareable single-page artifact as v0.1.0 — you can read it on its own, save it, send it to a friend.
 
 **Who it's for:** Anyone who wants to say something true about themselves they've been half-knowing for a while — not a personality test, not coaching, not therapy. A structured self-portrait.
 
@@ -38,9 +38,9 @@ That's it. Claude reads `CLAUDE.md`, becomes the Session Runner, and starts the 
 | **Checkpoints** | Two real calendar dates for your next move. |
 | **Three Gap Questions** | Open questions specific to your session, designed to compound into Session 2 if you come back. |
 
-You also get a **multi-page profile** at `users/firstname-lastname/` containing structured pages for identity, pattern, language, life-context, runner-manual, and system-issues — these compound across future sessions.
+Behind the scenes, the system also stores a **structured profile** at `users/firstname-lastname/` — separate pages for identity, pattern, language, life-context, runner-manual, and system-issues. These aren't required reading and aren't your deliverable; they're the system's structured memory so future sessions can compound on what you already said instead of asking again.
 
-See [`runtime/session-one/examples/sample-session-carlos.md`](runtime/session-one/examples/sample-session-carlos.md) for a complete walkthrough — a fictional 48-year-old construction foreman runs the session and walks away with "The Providing Stranger" as Your Name, "El Viejo" as his named pattern, and a Saturday-Rule first move. (Note: the sample shows the V1 single-page artifact format. V2 generates the multi-page profile in `users/`; see `users/.template/` for the V2 schema.)
+See [`runtime/session-one/examples/sample-session-carlos.md`](runtime/session-one/examples/sample-session-carlos.md) for a complete walkthrough — a fictional 48-year-old construction foreman runs the session and walks away with "The Providing Stranger" as Your Name, "El Viejo" as his named pattern, and a Saturday-Rule first move.
 
 ## How it works
 
@@ -53,8 +53,8 @@ Four fields are generated live from your answers using the rules in `generation-
 - Your Name + 3 gap questions
 
 After the session ends, two things happen:
-1. Your **transcript + feedback + shareable artifact** land in `session-records/YYYY-MM-DD-firstname-lastname/`
-2. Your **multi-page profile** lands in `users/firstname-lastname/` (created from `users/.template/`)
+1. Your **one-page artifact + transcript + post-session feedback** land in `session-records/YYYY-MM-DD-firstname-lastname/`. The artifact is the shareable HTML page — same format as v0.1.0, just located here now instead of at root.
+2. The system also writes a **structured profile** at `users/firstname-lastname/` from the `users/.template/` schema. Internal-use storage so Session 2 can read where you left off; you don't need to open these files yourself.
 
 Both directories are gitignored — your data never gets committed by accident.
 
@@ -88,8 +88,7 @@ claude-self-portrait-sessions/
 │       ├── session-1-script.md            (the verbatim script — 14 screens)
 │       ├── output-template.md             (the one-page profile artifact)
 │       ├── generation-rules.md            (rules for the 4 live-generated fields)
-│       ├── artifact-cleanup-guide.md      (how to clean a transcript into a shareable artifact)
-│       ├── artifacts/_template.html       (HTML template for the shareable artifact)
+│       ├── artifact-cleanup-guide.md      (rules for turning the raw 7-field profile into the cleaned shareable artifact.md)
 │       └── examples/
 │           └── sample-session-carlos.md   (a complete walkthrough)
 ├── users/

@@ -10,11 +10,9 @@ When you finish Session 1, the Session Runner creates a per-run directory here n
 session-records/
 ├── README.md                              (this file)
 └── YYYY-MM-DD-firstname-lastname/         (one per session run)
-    ├── transcript.md     (every screen's verbatim user input + the final artifact)
+    ├── transcript.md     (every screen's verbatim user input — raw session record)
     ├── feedback.md       (post-session Mom Test Q&A)
-    ├── artifact.html     (shareable HTML version of your profile)
-    ├── artifact.md       (markdown version, optional)
-    └── artifact.txt      (plain-text version, optional)
+    └── artifact.md       (the single cleaned shareable profile — what you share)
 ```
 
 ## Why per-run dirs?
