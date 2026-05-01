@@ -1,23 +1,22 @@
-# Session 1 — V2 Script
+# Session 1 — Script
 
-> **Time budget:** ~30-45 minutes (revised from V1's 15-min target — Anita pilot 2026-04-22 reality was ~45 min; the 15-min framing was aspirational and broke trust mid-session)
-> **Outcome:** User walks away with a one-page profile (see `output-template.md`)
+> **Time budget:** ~30-45 minutes (real-pilot reality — earlier "15-min" framing was aspirational and broke trust mid-session)
+> **Outcome:** User walks away with a one-page profile (see `output-template.md`) plus a multi-page profile in `../../users/firstname-lastname/`
 > **Runner:** Read each screen's user-facing content **verbatim**. Do not paraphrase.
-> **Ancestor:** V1 at `../session-one-V1/`. V2 changes documented in `iteration-log.md` "V1 → V2 Decisions Carried Forward."
 
 ---
 
-## Time Budget (V2 — rebudgeted from V1 reality)
+## Time Budget
 
-| Phase | V2 Duration | V1 Duration (for ref) | Screens |
-|-------|-------------|------------------------|---------|
-| Welcome | 60s | 30s | Screen 0 |
-| Phase A — Intake | ~25 min | 6:30 (5x off) | Screens 1-6 |
-| Reflection | 90s | 60s | Screen 6.5 |
-| Phase B — Artifact | 5 min | 4:00 | Screens 7-9 |
-| Phase C — Commitment | 4 min | 3:00 | Screens 10-11 |
-| Phase D — Compound Hook | 3 min | 1:30 | Screens 12-13 |
-| **Total** | **~40 min** | **15:00 (fantasy)** | 14 screens |
+| Phase | Duration | Screens |
+|-------|----------|---------|
+| Welcome | 60s | Screen 0 |
+| Phase A — Intake | ~25 min | Screens 1-6 |
+| Reflection | 90s | Screen 6.5 |
+| Phase B — Artifact | 5 min | Screens 7-9 |
+| Phase C — Commitment | 4 min | Screens 10-11 |
+| Phase D — Compound Hook | 3 min | Screens 12-13 |
+| **Total** | **~40 min** | 14 screens |
 
 **Note for runner:** Tell the user up front this takes 30-45 min, not 15 min. Honest framing protects trust when they hit Screen 4 or Screen 12 and need real time to think. Screens 2 and 4 are the big-think screens — let them breathe.
 
@@ -34,10 +33,10 @@
 4. Source / context (runner's note — how did they hear about this? — may already be known from the intake email)
 5. Today's date (confirm)
 
-**Runner action:** Check if `users/firstname-lastname.md` already exists in the repo.
-- **If it exists** — this person has done a session before. This is Session 2+. V1 flow does not cover this case — stop and flag to Joseph.
-- **If it doesn't exist** — create a new user card from `users/_template.md` with the intake data, then proceed to the welcome script below.
-- **If a file with the same `firstname-lastname.md` exists for a DIFFERENT person** — add a disambiguator to the new filename (e.g., `john-smith-college.md`). Confirm with Joseph before proceeding.
+**Runner action:** Check if `../../users/firstname-lastname/` already exists (the multi-page profile dir).
+- **If it exists** — this person has done a session before. This is Session 2+. The current Session 1 release does not cover that flow — tell the user this is for first-time sessions and ask them to confirm they want to start fresh.
+- **If it doesn't exist** — proceed to the welcome script below. The multi-page profile will be created during the post-session capture step (see `CLAUDE.md` for steps).
+- **If a directory with the same `firstname-lastname/` exists for a DIFFERENT person** — add a disambiguator (e.g., `john-smith-college/`). Confirm the disambiguator with the user before proceeding.
 
 ---
 
@@ -55,7 +54,7 @@
 
 **[User responds with "yes" / "ready" / equivalent.]**
 
-[RUNNER NOTE: If they ask questions, answer briefly and redirect to starting. If they seem hesitant, ask: "Is something unclear?" but do not re-explain the session. The permission-to-interrupt line is a V2 addition (2026-04-28) — it opens the channel for users like Anita who needed real-time clarification on Screens 4, 10, and 12 but didn't know they could ask.]
+[RUNNER NOTE: If they ask questions, answer briefly and redirect to starting. If they seem hesitant, ask: "Is something unclear?" but do not re-explain the session. The permission-to-interrupt line opens the channel for users who need real-time clarification on screens 4, 10, and 12 but don't know they can ask.]
 
 ---
 
@@ -101,7 +100,7 @@
 
 **[User writes ONE peak-moment scene in 3-5 sentences.]**
 
-[RUNNER NOTE: If they list multiple scenes, accept what they wrote (still usable data) but flag in `iteration-log.md`. The V2 fix (2026-04-28) added the 30-sec think cue + explicit "ONE moment, not a list" framing because Anita 2026-04-22 resolved the V1 ambiguity by writing 5 separate scenes — interpreting "3-5 sentences" as scene-count rather than depth on one scene. If they give a one-line answer, prompt once: "Can you give me a few more details about that ONE scene? Where were you, what were you doing, what did it feel like?" If they refuse or can't, accept what they wrote and move on.]
+[RUNNER NOTE: If they list multiple scenes, accept what they wrote (still usable data) but capture the multi-scene response in their transcript. The 30-sec think cue + explicit "ONE moment, not a list" framing exists because real pilots resolved the prompt's ambiguity by writing 5 separate scenes — interpreting "3-5 sentences" as scene-count rather than depth on one scene. If they give a one-line answer, prompt once: "Can you give me a few more details about that ONE scene? Where were you, what were you doing, what did it feel like?" If they refuse or can't, accept what they wrote and move on.]
 
 ---
 
@@ -117,13 +116,13 @@
 
 **[User lists a few people, then narrows to one. Capture both the broad list and the one chosen.]**
 
-[RUNNER NOTE: V2 change (2026-04-28) — split into 2 steps within one screen so users get permission-to-be-broad-first before committing. Anita 2026-04-22 hesitated on the V1 "one person" constraint not about envy itself but about commit-before-warmup. The broad list is throwaway; the narrowed-to-one is the data Screen 9 generation uses. If they say "I don't envy anyone," try once: "Not even a small thing? Someone whose life or approach makes you notice it — even in a small way?" If they still say no, move on.]
+[RUNNER NOTE: This is split into 2 steps within one screen so users get permission-to-be-broad-first before committing. Pilot users hesitated on a "one person" constraint not because of envy but because of commit-before-warmup. The broad list is throwaway; the narrowed-to-one is the data Screen 9 generation uses. If they say "I don't envy anyone," try once: "Not even a small thing? Someone whose life or approach makes you notice it — even in a small way?" If they still say no, move on.]
 
 ---
 
 ## SCREEN 4 — Externalize the Pattern (5-8 min — split into 4a / 4b / 4c)
 
-**[V2 NOTE for runner (added 2026-04-28):** This is the most important — and most cognitively demanding — screen. V1 collapsed it into one prompt and Anita (2026-04-22) couldn't make the leap from "describe the pattern" to "give it a character" in one move. V2 splits this into 3 micro-steps so the user describes the pattern in their own plain words FIRST, then names it as a character, then the runner reflects the name back tied to the user's plain words to lock shared meaning before any downstream screen reuses the character name. Do NOT offer example character names upfront — that anchors users on the runner's metaphors instead of their own language.**]**
+**[NOTE for runner:** This is the most important — and most cognitively demanding — screen. An earlier single-prompt design failed because pilot users couldn't make the leap from "describe the pattern" to "give it a character" in one move. The current design splits this into 3 micro-steps: the user describes the pattern in their own plain words FIRST, then names it as a character, then the runner reflects the name back tied to the user's plain words to lock shared meaning before any downstream screen reuses the character name. Do NOT offer example character names upfront — that anchors users on the runner's metaphors instead of their own language.**]**
 
 ---
 
@@ -165,7 +164,7 @@
 
 **[User confirms or corrects. If they correct, accept the correction and re-confirm before proceeding.]**
 
-[RUNNER NOTE: This step is non-negotiable. V1 sessions (Joe + Anita both) showed downstream re-rendering load — every time the character was reused (Screens 8, 12, 13), users silently re-decoded what it meant. The 4c reflect-back locks shared meaning ONCE so reuse is frictionless. If they correct your paraphrase, log it in `iteration-log.md` — your model of their pattern was wrong.]
+[RUNNER NOTE: This step is non-negotiable. Real-pilot data showed downstream re-rendering load — every time the character was reused (Screens 8, 12, 13), users silently re-decoded what it meant. The 4c reflect-back locks shared meaning ONCE so reuse is frictionless. If they correct your paraphrase, capture the correction in their transcript file — your model of their pattern was wrong.]
 
 ---
 
@@ -211,7 +210,7 @@
 
 **[User gives a chapter title.]**
 
-[RUNNER NOTE: V2 change (2026-04-28) — replaced V1's "Last one." with "Last question in this first part." Anita was relieved at V1's "Last one" thinking the session was nearly done, then 7 more screens followed — bait-and-switch from her POV. The new framing is honest: more is coming, but Phase A is closing. Accept their first answer. If they start over-thinking or editing, say: "Your first instinct is the right one. Go with what came first."]
+[RUNNER NOTE: An earlier "Last one." framing was tested and rejected — pilot users were relieved thinking the session was nearly done, then 7 more screens followed (bait-and-switch from their POV). "Last question in this first part" is honest: more is coming, but Phase A is closing. Accept their first answer. If they start over-thinking or editing, say: "Your first instinct is the right one. Go with what came first."]
 
 ---
 
@@ -223,7 +222,7 @@
 
 **[Brief pause — let them breathe before moving to Reflection (Screen 6.5).]**
 
-[RUNNER NOTE: V2 addition (2026-04-28). Phase A is the heaviest cognitive lift in the session — by the end of it, users are tired (Anita 2026-04-22 was cooked at this transition). The bridge line resets expectations for Phase B+ and acknowledges the lift. One sentence. Don't elaborate.]
+[RUNNER NOTE: Phase A is the heaviest cognitive lift in the session — by the end of it, users are tired (real pilots have been visibly cooked at this transition). The bridge line resets expectations for Phase B+ and acknowledges the lift. One sentence. Don't elaborate.]
 
 ---
 
@@ -312,10 +311,10 @@
 
 **[User picks one, edits one, rejects all, or writes their own.]**
 
-[RUNNER NOTES — V2 changes (2026-04-28):
-1. **"Vector" dropped from user-facing copy.** Replaced with "directions / paths / options." V1 used "vector" as internal jargon; Anita 2026-04-22 was confused by the word. Keep "vector" internally in generation-rules.md and session files; never user-facing.
+[RUNNER NOTES — design rules for this screen:
+1. **"Vector" dropped from user-facing copy.** Replaced with "directions / paths / options." Pilot users were confused by the word. Keep "vector" internally in generation-rules.md and session files; never user-facing.
 2. **Frame line added at top:** *"Based on what you wrote, here are three directions you could take over the next 1 to 2 weeks…"* — names Claude as the source of the options, ties to Screen 11 Stretch/Fair (7/14 days), tells the user what the screen IS FOR.
-3. **Option titles must be plain-action descriptions, NOT metaphors.** V1 example "Eat One Meal On Your Own Side" → V2 example "Eat one meal without judging yourself." Keep concept, drop metaphor.
+3. **Option titles must be plain-action descriptions, NOT metaphors.** Bad: "Eat One Meal On Your Own Side." Good: "Eat one meal without judging yourself." Keep concept, drop metaphor.
 4. **Generation rule — DO NOT offer options the user is already doing.** Filter generated options against Screen 2 + 4 + 5 data. If an option overlaps with existing behavior, regenerate it. Options must stretch, not confirm.
 5. **Cadence tag REQUIRED on each option.** "(daily habit — 20 min each morning)" or "(once this week — one meal)" or "(weekly — one practice session)". User sees the commitment shape before picking. Cadence cascades to Screen 10 (only fires for daily habits) and Screen 11 (framing adapts).
 6. **Generation rule — prefer daily-habit options when user data supports both.** Habits compound; one-shots don't. Envy data skews toward one-shots by construction; treat envy as a *direction signal* (what does the user wish they had?), then translate into a repeatable practice.
@@ -327,7 +326,7 @@
 
 ## SCREEN 10 — Habit Stacking (4 min — split into 10a / 10b / 10c)
 
-**[V2 NOTE for runner (added 2026-04-28):** Screen 10 in V1 packed three asks into one screen (accept first move + pick trigger from menu + assemble IF/THEN). Anita (2026-04-22) couldn't have done this without Joseph live-interpreting. V2 splits the screen and reframes around **habit stacking** (Atomic Habits / BJ Fogg shorthand most users have prior exposure to) instead of explaining WOOP from scratch. **This screen ONLY fires for daily-habit cadence options** (per Screen 9 cadence tag). For once-this-week or weekly options, skip 10b habit-stacking entirely and go straight to 10c IF/THEN with a date-based trigger.**]**
+**[NOTE for runner:** An earlier design packed three asks into one screen (accept first move + pick trigger from menu + assemble IF/THEN). Pilot users couldn't do this without live runner interpretation. The current design splits the screen and reframes around **habit stacking** (Atomic Habits / BJ Fogg shorthand most users have prior exposure to) instead of explaining WOOP from scratch. **This screen ONLY fires for daily-habit cadence options** (per Screen 9 cadence tag). For once-this-week or weekly options, skip 10b habit-stacking entirely and go straight to 10c IF/THEN with a date-based trigger.**]**
 
 ---
 
@@ -361,7 +360,7 @@
 
 **[User answers both. The trigger comes from her life, not a fixed menu — automatically filters out triggers that don't match the new habit's timing.]**
 
-[RUNNER NOTE: V2 change (2026-04-28) replaced V1's fixed trigger menu (Sunday coffee / Friday laptop close / etc.) with these two narrowing questions. The fixed menu often didn't fit; users either had to force a fit or write in. The narrowing questions surface a personal trigger every time. **For one-shot or weekly options:** skip 10b entirely. The trigger is a date, not a habit-stack. Go straight to 10c with: "When this week will you do it?"]
+[RUNNER NOTE: An earlier fixed trigger menu (Sunday coffee / Friday laptop close / etc.) was replaced with these two narrowing questions. The fixed menu often didn't fit; users either had to force a fit or write in. The narrowing questions surface a personal trigger every time. **For one-shot or weekly options:** skip 10b entirely. The trigger is a date, not a habit-stack. Go straight to 10c with: "When this week will you do it?"]
 
 ---
 
@@ -384,7 +383,7 @@
 
 ## SCREEN 11 — Checkpoints (90s — framing adapts to cadence)
 
-**[V2 NOTE for runner (added 2026-04-28):** Checkpoint framing must match the cadence tagged on the chosen Screen 9 option. V1's "Stretch / Fair" framing only made sense for daily habits (Anita's "1 meal eaten" one-shot made the V1 framing nonsensical — "most of 7 times you ate one meal"?). Use the right framing below based on cadence.**]**
+**[NOTE for runner:** Checkpoint framing must match the cadence tagged on the chosen Screen 9 option. An earlier "Stretch / Fair" framing only made sense for daily habits — for one-shot moves (e.g., "1 meal eaten") it was nonsensical ("most of 7 times you ate one meal"?). Use the right framing below based on cadence.**]**
 
 ---
 
@@ -452,9 +451,9 @@
 
 ---
 
-## SCREEN 13 — Your Name Reveal + Gaps + Honest Hook (split into 13a / 13b — V2)
+## SCREEN 13 — Your Name Reveal + Gaps + Honest Hook (split into 13a / 13b)
 
-**[V2 NOTE for runner (added 2026-04-28):** Two changes to V1 here. **(1)** Split into 2 beats so the archetype lands and registers BEFORE the 3 gap questions arrive. V1 sessions (Joe + Anita both) showed the archetype landed strongly while the gap questions evaporated when delivered together — the screen was too dense to let both register. **(2) NEW V2 product decision (2026-04-28):** Users do NOT rename the archetype. Instead the runner asks "Does this sound right?" — if yes, keep moving. If not, the user writes reasons it feels off, and the runner promises Session 2 will discuss those reasons and figure out why it doesn't quite hit. The reasons-it-feels-off become Session 2 input, not a renaming exercise inside Session 1.**]**
+**[NOTE for runner:** Two design rules for this screen. **(1)** Split into 2 beats so Your Name lands and registers BEFORE the 3 gap questions arrive. Real pilots showed Your Name landing strongly while the gap questions evaporated when delivered together — the screen was too dense to let both register. **(2)** Users do NOT rename Your Name in this session. Instead the runner asks "Does this sound right?" — if yes, keep moving. If not, the user writes reasons it feels off, and the runner promises Session 2 will discuss those reasons and figure out why it doesn't quite hit. The reasons-it-feels-off become Session 2 input, not a renaming exercise inside Session 1.**]**
 
 ---
 
@@ -492,7 +491,7 @@
 
 → Move to Screen 13b.
 
-[RUNNER NOTE: V2 change (2026-04-28) — V1 offered "Keep / Say no / Rename" as a 3-option handle response. Joseph's call: users do NOT rename inside Session 1. Reasons-it-feels-off becomes Session 2 input. **Do NOT** offer to retitle on the spot. **Do NOT** suggest alternative names. The user's resistance is data for Session 2, not a problem to solve in Session 1. Capture the reasons verbatim — those are the highest-signal Session 2 inputs you'll get.]
+[RUNNER NOTE: An earlier design offered "Keep / Say no / Rename" as a 3-option handle response. Current design: users do NOT rename inside Session 1. Reasons-it-feels-off becomes Session 2 input. **Do NOT** offer to retitle on the spot. **Do NOT** suggest alternative names. The user's resistance is data for Session 2, not a problem to solve in Session 1. Capture the reasons verbatim — those are the highest-signal Session 2 inputs you'll get.]
 
 ---
 
@@ -516,7 +515,7 @@
 
 **[User optionally answers the surprise question. Capture verbatim if they answer.]**
 
-[RUNNER NOTE: V2 change (2026-04-28) — gap questions are now framed as "things to notice between now and Session 2," not as questions the user must hold in mind right now. Lighter cognitive load + extends the session beyond the 40 min. The "this is V1, we'll sharpen it next session" line is NOT a marketing hook — it's an honest promise that must be mechanically fulfilled in a real Session 2 one week later. Do not say this if Session 2 isn't actually going to happen.]
+[RUNNER NOTE: Gap questions are framed as "things to notice between now and Session 2," not as questions the user must hold in mind right now. Lighter cognitive load + extends the session beyond the 40 min. The "this is the first version, we'll sharpen it next session" line is NOT a marketing hook — it's an honest promise that must be mechanically fulfilled in a real Session 2 one week later. Do not say this if Session 2 isn't actually going to happen.]
 
 ---
 
@@ -528,7 +527,7 @@ After Screen 13:
 2. Write the complete session (transcript + artifact) to `sessions/YYYY-MM-DD-[username].md`
 3. Begin the post-session feedback protocol (see `CLAUDE.md` for the 5 Mom Test questions)
 4. Capture feedback in `feedback/YYYY-MM-DD-[username].md`
-5. Log any friction or design insights in `iteration-log.md`
+5. Capture any friction or unusual moments alongside the user's other answers in the transcript or feedback file
 
 ---
 
@@ -541,7 +540,7 @@ After Screen 13:
 | User can't name a character on Screen 4 | Offer: "It can be anything — villain, animal, object, just a name. What comes to mind?" If still blank, use generic "the pattern" wording downstream. |
 | User skips more than 2 Phase A screens | Pause the session. Explain: "We need at least 4 of 6 answers to build something meaningful. Continue or stop?" |
 | User cries / gets emotional | "Take whatever time you need. We can pause or stop entirely — your call." Do not rush them. |
-| User says "this is bullshit" mid-session | Capture verbatim in `iteration-log.md`. Ask: "What specifically isn't landing? We can stop or adjust." |
-| User's answers seem performative / fake | Do not call it out in the moment. Note in `iteration-log.md` after the session. |
+| User says "this is bullshit" mid-session | Capture verbatim in their feedback file. Ask: "What specifically isn't landing? We can stop or adjust." |
+| User's answers seem performative / fake | Do not call it out in the moment. Note in their feedback file after the session. |
 | User wants to see what you're writing / generating | Show them. Transparency is fine. |
 | User asks "what's the right answer?" | "There isn't one. Just your actual answer." |

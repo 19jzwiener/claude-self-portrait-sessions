@@ -1,8 +1,6 @@
-# Generation Rules — V2
+# Generation Rules
 
 > How to generate the 4 live-generated fields using ONLY this session's user data. No templates pre-filled with generic content. No patterns from other sessions. Every generated field must be traceable to specific user answers.
->
-> **V2 changes (2026-04-28) from V1:** Screen 9 generation rules updated (drop "vector" from user-facing; cadence tag required; filter overlapping behaviors; prefer daily-habit options). Screen 12 generation rules fully replaced with concrete-noun/short-sentence/contrast-structure rules + forbidden patterns + quality gate. Screen 13 rules updated to reflect new product decision (no user-rename option). **Term rename 2026-04-28:** "archetype/signature" → "Your Name" via 3-mentor gate (Tony's verdict over Hormozi's "Meet You" + Neumeier's "Name"). V1 generation-rules at `../session-one-V1/generation-rules.md`.
 
 ---
 
@@ -59,7 +57,7 @@ Each option is:
 
 ### V2 generation rule — FILTER overlapping behaviors
 
-**Before delivering, check each option against Screens 2 + 4 + 5 data.** If an option overlaps with what the user is already doing, **regenerate it.** Options must STRETCH, not CONFIRM. (V1 Screen 9 sometimes generated an option Anita was already doing most days, which became the "easy pick" under fatigue and produced session output of "keep doing what you're doing" — no forward motion.)
+**Before delivering, check each option against Screens 2 + 4 + 5 data.** If an option overlaps with what the user is already doing, **regenerate it.** Options must STRETCH, not CONFIRM. (Earlier designs sometimes generated an option the user was already doing most days, which became the "easy pick" under fatigue and produced session output of "keep doing what you're doing" — no forward motion.)
 
 Specifically:
 - Does any element of the proposed option appear in Screen 2's peak-moment scene? → too close, regenerate
@@ -127,9 +125,9 @@ Cadence determination per option:
 
 ---
 
-## 3. Negative Surprise — Screen 12 *(V2 — fully rewritten)*
+## 3. Negative Surprise — Screen 12
 
-> **V2 reset (2026-04-28):** V1's generation default was abstract-mechanism language — "indistinguishable from X from the inside," "X's shutdown move." Three independent data points (Joe 2026-04-16 + Anita 2026-04-22 across two failed drafts) showed the abstract-mechanism default produced surprises Joseph himself couldn't decipher to deliver. The third version that landed for Anita used concrete user-examples + short sentences + plain contrast — pattern: `[Two concrete user-examples]. [Contrast: "one X, the other Y"]. [Punchline about timing — "you only know after"]`. V2 makes that landing pattern the DEFAULT, not the fallback.
+> **Why this screen has its own rules:** Earlier designs defaulted to abstract-mechanism language — "indistinguishable from X from the inside," "X's shutdown move." Pilot data showed the abstract-mechanism default produced surprises the runner couldn't deliver in plain words. The version that landed reliably used concrete user-examples + short sentences + plain contrast — pattern: `[Two concrete user-examples]. [Contrast: "one X, the other Y"]. [Punchline about timing — "you only know after"]`. The current rules make that landing pattern the DEFAULT, not the fallback.
 
 ### Input data used
 - Screen 7 signature (what they wrote about coming alive — full text)
@@ -174,20 +172,20 @@ These specific phrasings are banned from V2:
 
 > *"If I read this to someone who didn't do the session, would they understand it without context?"*
 
-- If **NO** → rewrite. The runner couldn't explain abstract-mechanism drafts to Anita; the V2 rule prevents that failure mode at generation time.
+- If **NO** → rewrite. Pilot data showed the runner couldn't explain abstract-mechanism drafts; this rule prevents that failure mode at generation time.
 - If **YES** → deliver.
 
 The runner must be able to explain the surprise in plain words to an outsider. If you couldn't, the surprise isn't ready.
 
-### Example — V1 failed draft vs. V2 landing template
+### Example — failed draft vs. landing template
 
-**V1 failed (abstract-mechanism — Anita couldn't parse, Joseph couldn't explain):**
+**Failed (abstract-mechanism — pilot user couldn't parse, runner couldn't explain):**
 > "Your biggest strength — engaging deeply when others bring energy — is indistinguishable from The Hamster in a Wheel from the inside. Real presence and pure escape feel identical while you're in the state."
 
-**V2 landing template (Anita's actual third pass — landed cleanly):**
+**Landed (concrete-noun contrast — same user, third pass):**
 > "Real rest and hiding from life feel the same in the moment. But one fills you up. The other just numbs you."
 
-Note how V2 lands: concrete contrast (rest vs hiding) + plain verb (fills vs numbs) + timing punchline (the moment / how they differ shows up later) — no character name needed, no abstract-mechanism vocabulary.
+Note how the second version lands: concrete contrast (rest vs hiding) + plain verb (fills vs numbs) + timing punchline (the moment / how they differ shows up later) — no character name needed, no abstract-mechanism vocabulary.
 
 ### Quality check before delivery
 
@@ -207,8 +205,8 @@ Note how V2 lands: concrete contrast (rest vs hiding) + plain verb (fills vs num
 - Templates that could apply to anyone
 - Softening language ("to be fair...", "this is common...")
 - Advice or fix suggestions — the negative surprise stands alone, no resolution
-- **(V2)** Abstract-mechanism framings (the V1 default — see Forbidden Patterns above)
-- **(V2)** Using the character name unnecessarily — sometimes plain contrast lands without invoking the character (Anita's landing version omitted "Hamster in a Wheel")
+- Abstract-mechanism framings (see Forbidden Patterns above)
+- Using the character name unnecessarily — sometimes plain contrast lands without invoking the character (the landing example above omitted the character name)
 
 ---
 
@@ -231,7 +229,7 @@ e.g. "The Quiet Builder," "The Rehearsing Starter," "The Hidden Operator"
 
 #### Construction rules
 
-1. **It's a HANDLE, not a verdict.** The user confirms it lands or writes reasons it feels off (no rename in V2). Do not write it as if final. **(V2 product decision 2026-04-28:** removed the user-rename option; reasons-it-feels-off becomes Session 2 input instead. See Screen 13 in `session-1-script.md` for the 13a flow.)
+1. **It's a HANDLE, not a verdict.** The user confirms it lands or writes reasons it feels off (no rename inside this session). Do not write it as if final. The reasons-it-feels-off become Session 2 input instead. See Screen 13 in `session-1-script.md` for the 13a flow.
 2. **3-5 words max.** Short enough to hold in one breath.
 3. **Captures the tension, not just the strength.** A good Your Name reveals the interplay between their signature AND leak, not one or the other.
 4. **Uses a qualifier that's specific, not generic.** "The Undeclared Builder" beats "The Builder." "The Rehearsing Starter" beats "The Beginner."
@@ -339,18 +337,18 @@ Do not:
 
 ### Negative Surprise
 
-**BAD (generic — banned in V1, still banned in V2):**
+**BAD (generic — banned):**
 > Your strengths can also become your weaknesses if overused.
 
-**BAD V1-default (abstract-mechanism — banned in V2):**
+**BAD (abstract-mechanism — banned):**
 > Your biggest strength — going deep alone on a problem you care about — is indistinguishable from The Quiet Hours character from the inside. Deep-solo building and deep-solo scrolling feel identical while you're in the state. You can't tell them apart until after.
 >
-> *(Why banned in V2: "indistinguishable from X," "from the inside," abstract-mechanism. Failed for Anita twice in live session 2026-04-22 — runner couldn't explain it to her in plain words.)*
+> *(Why banned: "indistinguishable from X," "from the inside," abstract-mechanism vocabulary the runner can't deliver in plain words.)*
 
-**GOOD V2-default (concrete contrast + plain verbs + timing punchline):**
+**GOOD (concrete contrast + plain verbs + timing punchline):**
 > Building something hard and scrolling for an hour can feel the same in the moment. One fills you up. The other just numbs you. You only know which it was the next morning.
 >
-> *(Why this lands: concrete user-examples — "building something hard" + "scrolling for an hour" — short sentences, plain contrast, timing punchline. No character name needed; no abstract-mechanism vocabulary. This is the V2 default template, not a fallback.)*
+> *(Why this lands: concrete user-examples — "building something hard" + "scrolling for an hour" — short sentences, plain contrast, timing punchline. No character name needed; no abstract-mechanism vocabulary. This is the default template, not a fallback.)*
 
 ---
 

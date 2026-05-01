@@ -1,8 +1,8 @@
-# Output Template — Session 1 Profile *(V2)*
+# Output Template — Session 1 Profile
 
 > The one-page profile the user walks away with. Copy this template into the session file and fill each field with the user's data + your generated content.
 >
-> **V2 changes (2026-04-28):** "Artifact" dropped from user-facing copy (Anita 2026-04-22 didn't know the word). Internal team docs/files keep "artifact"; user-facing copy uses "profile" or "profile page." **Term rename:** the 3-5 word handle is now called **"Your Name"** (was "archetype/signature"; locked via 3-mentor gate 2026-04-28 — Tony's verdict). Your Name no longer offers user-rename — see V2 Screen 13 in script for the "does this sound right?" + reasons-it-doesn't-fit flow.
+> **Naming notes:** "Artifact" is dropped from user-facing copy — pilot users didn't know the word; user-facing copy uses "profile" or "profile page." The 3-5 word handle is **"Your Name"** — and users do NOT rename it in Session 1; if it doesn't land, the user writes reasons it feels off, and those reasons become Session 2 input (see Screen 13 in `session-1-script.md`).
 
 ---
 

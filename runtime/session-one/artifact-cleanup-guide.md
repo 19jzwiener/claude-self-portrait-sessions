@@ -4,7 +4,7 @@
 >
 > **Why this exists:** The raw artifact is structured for internal consistency. The shareable version has different constraints — it has to stand alone, read plainly, and feel like a personal page instead of a form output.
 >
-> **Source:** Learnings from Anita's 2026-04-22 session. See `iteration-log.md` for the raw findings behind each rule.
+> **Source:** Learnings from real-pilot sessions; rules emerged from cleanup passes that turned raw transcripts into pages users could read on their own.
 
 ---
 
@@ -54,7 +54,7 @@ Check the user's post-session Q4 ("single sentence from your profile page you'd 
 
 Lead with that. Put it high on the page, visually distinct.
 
-For Anita: "Half present" → Your Name leads.
+Example: if a pilot user said "Half present" stuck with them most → that becomes Your Name on the lead.
 
 ### 3. Add a plain-language gloss for the Screen 4 character name
 
@@ -65,7 +65,7 @@ Template:
 >
 > *(That's the name you gave it — [user's plain-words description of the pattern, drawn from their Screen 4 answer].)*
 
-For Anita:
+Example:
 > **Your Pattern — Hamster in a Wheel**
 >
 > *(That's the name you gave it — the part of you that keeps repeating the same thoughts, wanting to shut it all out, feeling like life is just the to-do list on repeat.)*
@@ -121,7 +121,7 @@ This gives the user permission to not hold them in mind, while still signaling c
 The shareable page is from the product, not from the person who ran the session. Avoid:
 
 - "We" (implies Claude + user, reads awkwardly in text)
-- "I" written as if the runner is speaking (confusing — was it Claude? Joseph? the product?)
+- "I" written as if the runner is speaking (confusing — was it the runner? the product?)
 
 Prefer:
 - Direct second-person: "You can keep any part of it."
@@ -175,7 +175,7 @@ For the `.txt` email-paste version:
 - [ ] Surprise is the final landed version only — concrete user-examples + plain contrast (NOT abstract-mechanism per V2 generation rules)
 - [ ] Gap questions framed as "next time" with explicit permission not to hold them now
 - [ ] Opener uses forward-looking framing ("current view that will evolve") — NOT V1's defensive "keep/change/reject" framing
-- [ ] Your Name has "does this sound right?" framing — NOT V1's "keep/say no/rename" buttons (V2 product decision 2026-04-28)
+- [ ] Your Name has "does this sound right?" framing — NOT a "keep/say no/rename" 3-option choice
 - [ ] Closer is V1 + next-time honest promise
 - [ ] HTML version produced from `_template.html` with all `{{PLACEHOLDERS}}` replaced
 - [ ] HTML opens correctly in a browser (verify before sending)
@@ -187,14 +187,4 @@ For the `.txt` email-paste version:
 
 ## Session-by-session learning
 
-This guide updates as more sessions happen. When a new session surfaces a cleanup pattern not covered here, add it. Use the iteration log for raw findings; use this guide for durable rules.
-
-### Change log
-
-| Date | Added | Based on |
-|------|-------|----------|
-| 2026-04-23 | Initial guide — 10 rules | Anita 2026-04-22 session (see `iteration-log.md`) |
-| 2026-04-23 | Added HTML output as primary format + `_template.html` workflow for reusable per-user generation | Joseph request — need a formatted page she can open in browser, download, send |
-| 2026-04-23 | Rewrote Rule 9 opener/archetype-subnote to forward-looking frame ("current view that will evolve") instead of defensive "keep/change/reject" frame | Joseph feedback — old framing sounded apologetic, new framing positions page as a living artifact matching the 10-session arc |
-| 2026-04-23 | Added explicit feedback-invitation line to the closer on all page types (artifact, preview, arc). Two-line footer: V1 promise + feedback invite | Joseph request — pilot users don't assume they can critique a polished-looking page; the invitation has to be stated |
-| 2026-04-23 | Updated all file-path examples to `firstname-lastname` naming convention. Added note about `users/firstname-lastname.md` card update after artifact generation | Schema rollout — first+last+email+source captured at intake; user cards track context + Your Manual across sessions |
+This guide updates as more sessions surface new cleanup patterns. When you spot one not covered here, add it.
