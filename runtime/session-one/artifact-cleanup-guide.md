@@ -12,7 +12,7 @@
 
 For each user, produce **one** cleaned artifact file:
 
-- `../../session-records/YYYY-MM-DD-firstname-lastname/artifact.md` — the single shareable artifact in markdown. Both the user and the system can read this; it renders nicely in any markdown viewer (GitHub, Obsidian, VS Code preview, etc.). The user can save it, share it, paste it into a doc, or convert it to another format if they want.
+- `../../users/firstname-lastname/artifact.md` — the user's current one-page profile in markdown, evolving across sessions. Both the user and the system can read this; it renders nicely in any markdown viewer (GitHub, Obsidian, VS Code preview, etc.). The user can save it, share it, paste it into a doc, or convert it to another format if they want. After Session 1 it's the deliverable; subsequent sessions update it in place. The change log at `../../users/firstname-lastname/changes/artifact.md` preserves how it has evolved.
 
 **Naming convention:** `firstname-lastname` (lowercase, hyphen-separated). If two people share the same name, add a context disambiguator (e.g., `john-smith-college`). See `CLAUDE.md` "Naming convention" section for the full rule.
 
@@ -164,7 +164,7 @@ For the `.txt` email-paste version:
 - [ ] Your Name has "does this sound right?" framing — NOT a "keep/say no/rename" 3-option choice
 - [ ] Closer is V1 + next-time honest promise
 - [ ] Conditional sections handled (surprise addition, cadence-dependent checkins, surprised-by question)
-- [ ] File saved at `../../session-records/YYYY-MM-DD-firstname-lastname/artifact.md` (single canonical output)
+- [ ] File saved at `../../users/firstname-lastname/artifact.md` (single canonical output, evolves across sessions)
 
 ---
 

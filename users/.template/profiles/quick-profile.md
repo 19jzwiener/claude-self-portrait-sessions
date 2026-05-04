@@ -35,20 +35,15 @@
 | [`life-context.md`](life-context.md) | When session goes into a specific life domain |
 | [`runner-manual.md`](runner-manual.md) | **Always** — operational notes for running their sessions |
 | [`system-issues.md`](system-issues.md) | When updating script versions; check what traces to them |
-| [`sessions/`](sessions/) | Most recent session file every prep; older ones on-demand |
+| [`../minutes/`](../minutes/) | Most recent session minutes every prep; older ones on-demand |
 
 ---
 
 ## Session History
 
-| Date | Session | Transcript | Artifact | Feedback | Profile session file |
-|------|---------|------------|----------|----------|----------------------|
-| [date] | 1 | [link] | [link] | [link] | [s01](sessions/s01-[date].md) |
+| Date | Session | Raw transcript | Raw feedback | Minutes |
+|------|---------|----------------|--------------|---------|
+| [date] | 1 | [`raw/s01-[date]/transcript.md`](../raw/s01-[date]/transcript.md) | [`raw/s01-[date]/feedback.md`](../raw/s01-[date]/feedback.md) | [`minutes/s01-[date].md`](../minutes/s01-[date].md) |
 
 ---
 
-## Change log
-
-| Date | What changed | Why |
-|------|--------------|-----|
-| [date] | Created from Session 1 record | First session capture |

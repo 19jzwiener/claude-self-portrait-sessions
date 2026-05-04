@@ -49,8 +49,3 @@
 
 ---
 
-## Change log
-
-| Date | What changed | Why |
-|------|--------------|-----|
-| [date] | Created from S1 record | First session capture |

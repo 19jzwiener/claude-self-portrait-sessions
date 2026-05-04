@@ -38,7 +38,7 @@ That's it. Claude reads `CLAUDE.md`, becomes the Session Runner, and starts the 
 | **Checkpoints** | Two real calendar dates for your next move. |
 | **Three Gap Questions** | Open questions specific to your session, designed to compound into Session 2 if you come back. |
 
-Behind the scenes, the system also stores a **structured profile** at `users/firstname-lastname/` — separate pages for identity, pattern, language, life-context, runner-manual, and system-issues. These aren't required reading and aren't your deliverable; they're the system's structured memory so future sessions can compound on what you already said instead of asking again.
+Behind the scenes, the system also stores a **structured profile** at `users/firstname-lastname/` — your evolving artifact, separate profile pages for each dimension (identity, pattern, language, life-context, runner-manual, system-issues), per-session raw records, narrative minutes, and a per-page change log so you can see how each dimension has shifted. These aren't required reading and aren't your deliverable; they're the system's structured memory so future sessions can compound on what you already said instead of asking again.
 
 See [`runtime/session-one/examples/sample-session-carlos.md`](runtime/session-one/examples/sample-session-carlos.md) for a complete walkthrough — a fictional 48-year-old construction foreman runs the session and walks away with "The Providing Stranger" as Your Name, "El Viejo" as his named pattern, and a Saturday-Rule first move.
 
@@ -52,11 +52,14 @@ Four fields are generated live from your answers using the rules in `generation-
 - The negative surprise
 - Your Name + 3 gap questions
 
-After the session ends, two things happen:
-1. Your **one-page artifact + transcript + post-session feedback** land in `session-records/YYYY-MM-DD-firstname-lastname/`. The artifact is the shareable HTML page — same format as v0.1.0, just located here now instead of at root.
-2. The system also writes a **structured profile** at `users/firstname-lastname/` from the `users/.template/` schema. Internal-use storage so Session 2 can read where you left off; you don't need to open these files yourself.
+After the session ends, the system writes everything for you under `users/firstname-lastname/`:
+1. Your one-page **artifact** at `users/firstname-lastname/artifact.md` — the shareable deliverable. Single file. Evolves across sessions.
+2. The verbatim **raw record** at `users/firstname-lastname/raw/s01-YYYY-MM-DD/transcript.md` and `feedback.md`.
+3. A **narrative synthesis** of the session at `users/firstname-lastname/minutes/s01-YYYY-MM-DD.md`.
+4. The **structured profile** in `users/firstname-lastname/profiles/` — separate pages per dimension. Internal-use storage so Session 2 can read where you left off.
+5. **Per-page change logs** in `users/firstname-lastname/changes/` — preserve how each dimension and the artifact have evolved over time.
 
-Both directories are gitignored — your data never gets committed by accident.
+Your `users/firstname-lastname/` directory is gitignored — your data never gets committed by accident.
 
 ## Updates
 
@@ -66,7 +69,7 @@ Both directories are gitignored — your data never gets committed by accident.
 git pull origin main
 ```
 
-Your local data — `users/firstname-lastname/`, `session-records/`, plus runtime-internal `runtime/session-one/sessions/`, `runtime/session-one/feedback/`, `runtime/session-one/users/`, `runtime/session-one/outputs/` — is gitignored. It stays on your machine and is never touched by updates.
+Your local data — `users/firstname-lastname/` — is gitignored. It stays on your machine and is never touched by updates.
 
 If you want to customize the script for your own use, fork the repo. If you have changes you'd like to contribute back, open a PR — `.gitignore` will prevent your personal session data from being staged.
 
@@ -91,14 +94,12 @@ claude-self-portrait-sessions/
 │       ├── artifact-cleanup-guide.md      (rules for turning the raw 7-field profile into the cleaned shareable artifact.md)
 │       └── examples/
 │           └── sample-session-carlos.md   (a complete walkthrough)
-├── users/
-│   ├── README.md                          (explains where your multi-page profile lands)
-│   └── .template/                         (the multi-page profile schema)
-└── session-records/
-    └── README.md                          (explains where each session's records land)
+└── users/
+    ├── README.md                          (explains where your profile lands)
+    └── .template/                         (the schema — copied into your dir on first session)
 ```
 
-> v0.2.0 introduced the `runtime/` wrapper and promoted Session 1 to V2 (multi-page profile output). See [CHANGELOG.md](CHANGELOG.md) for the migration note.
+> v0.2.0 introduced the `runtime/` wrapper, promoted Session 1 to V2, and reorganized per-user output into a single user-rooted layout (everything about you lives under `users/firstname-lastname/`). See [CHANGELOG.md](CHANGELOG.md) for the migration note.
 
 ## Support
 

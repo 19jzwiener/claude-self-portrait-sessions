@@ -1,49 +1,61 @@
-# Profile Templates
+# User Template Schema
 
-> **Created:** 2026-04-29
-> **Purpose:** Templates for the multi-page user profile structure. Used for both real users (`life-prod-testing/users/[name]/`) and persona test runs (`life-prod-testing/personas/[name]/`).
+> **Created:** 2026-04-29 · **Updated:** 2026-05-04 (multi-zone restructure)
+> **Purpose:** Schema for the per-user profile structure. Used for both real users (`users/[firstname-lastname]/`) and persona test runs.
 
 ---
 
 ## How to use
 
-1. **Copy this entire directory** into the destination user/persona folder:
-   - Real user: `cp -r users/.template/* users/[firstname-lastname]/`
-   - Persona: `cp -r users/.template/* personas/[firstname-lastname]/`
-2. **Rename `sessions/s01-YYYY-MM-DD.md`** to use the actual session date (e.g., `s01-2026-05-02.md`)
-3. **Populate each page** by filling in `[bracketed placeholders]` from the just-completed session content
-4. **Delete this README.md** from the copied destination — it's a template-only file, not a profile page
+1. **Copy this entire directory** into the destination user folder:
+   ```
+   cp -r users/.template/* users/[firstname-lastname]/
+   ```
+2. **Delete every `README.md`** from the copied destination — those are template-only documentation, not data files.
+3. **Populate** profile pages by filling in `[bracketed placeholders]` from the just-completed session content.
+4. **Add the actual session-dated subdirectories** to `raw/` (e.g., `raw/s01-2026-05-15/transcript.md` + `feedback.md`) and the matching session file to `minutes/` (e.g., `minutes/s01-2026-05-15.md`).
+5. **Append initial entries** to every change log file (`changes/profiles/[page].md` and `changes/artifact.md`).
 
 ---
 
-## Pages in the template
+## Directory structure
 
-| File | Purpose |
-|------|---------|
-| `quick-profile.md` | Cheat sheet — read first |
-| `identity.md` | Your Name + etymology + threads |
-| `pattern.md` | Current pattern + active commitment |
-| `language.md` | Symbolic vocabulary |
-| `life-context.md` | People / places / projects / body / time |
-| `runner-manual.md` | Operational notes for running their sessions |
-| `system-issues.md` | V[N] issues traced to them |
-| `sessions/s01-YYYY-MM-DD.md` | Frozen first-session record |
+```
+users/[firstname-lastname]/
+├── artifact.md                   ← single deliverable, evolves across sessions
+├── profiles/                     ← active profile pages (current state only)
+│   ├── quick-profile.md
+│   ├── identity.md
+│   ├── pattern.md
+│   ├── language.md
+│   ├── life-context.md
+│   ├── runner-manual.md
+│   └── system-issues.md
+├── inactive-profiles/            ← retired profile pages (parking lot)
+├── raw/                          ← per-session verbatim records
+│   └── sNN-YYYY-MM-DD/
+│       ├── transcript.md
+│       └── feedback.md
+├── minutes/                      ← per-session narrative synthesis
+│   └── sNN-YYYY-MM-DD.md
+└── changes/                      ← evolution history
+    ├── artifact.md               ← change log for the artifact
+    ├── profiles/                 ← one change log per active profile page
+    │   ├── quick-profile.md
+    │   ├── identity.md
+    │   ├── pattern.md
+    │   ├── language.md
+    │   ├── life-context.md
+    │   ├── runner-manual.md
+    │   └── system-issues.md
+    └── inactive-profiles/        ← change logs for retired profile pages
+```
 
 ---
 
-## Cross-reference
+## Architectural rules
 
-This template differs from `session-one-V2/users/_template.md`:
-
-| Template | Purpose |
-|----------|---------|
-| `session-one-V2/users/_template.md` | V2-bound user *card* (operational scratch, single-file, V2-version-specific) |
-| `users/.template/` (this) | Cross-version user *profile* (multi-page, persistent, refinable across sessions and script versions) |
-
-For persona test runs in life-prod-testing, **only this template is required**. The V2 user card is optional (kept for parity with the V2 logging flow but redundant with the multi-page profile — testing will reveal whether to drop it).
-
----
-
-## Architecture context
-
-See `users/UPDATE-PROTOCOL.md` for the full post-session update protocol (Tier 1 / Tier 2, second-agent audit, stale-page diagnostic). For persona test runs, **most of UPDATE-PROTOCOL.md does NOT apply yet** — Session 1 is the only session that exists publicly, so there's no accumulated content to audit, no Tier 2 queue to surface, no stale pages to diagnose. Just the initial capture.
+- **Profile pages stay current-state only.** No change-log sections embedded in profile pages. Evolution lives exclusively in `changes/`.
+- **Artifact evolves in place.** No per-session artifact snapshots. The change log at `changes/artifact.md` preserves the narrative of how the artifact has shifted.
+- **Profiles travel with their change log.** When moving a profile from `profiles/` to `inactive-profiles/` (or back), move the matching change log too.
+- **Raw records are write-once.** Never edit a raw transcript or feedback after the session ends — it's the historical baseline.

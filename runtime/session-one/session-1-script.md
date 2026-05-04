@@ -523,11 +523,12 @@
 
 After Screen 13:
 
-1. Generate the final artifact using `output-template.md`
-2. Write the complete session (transcript + artifact) to `sessions/YYYY-MM-DD-[username].md`
+1. Generate the final artifact at `../../users/[firstname-lastname]/artifact.md` using `output-template.md` rules + `artifact-cleanup-guide.md` rules
+2. Write the verbatim transcript to `../../users/[firstname-lastname]/raw/s01-YYYY-MM-DD/transcript.md`
 3. Begin the post-session feedback protocol (see `CLAUDE.md` for the 5 Mom Test questions)
-4. Capture feedback in `feedback/YYYY-MM-DD-[username].md`
+4. Capture feedback in `../../users/[firstname-lastname]/raw/s01-YYYY-MM-DD/feedback.md`
 5. Capture any friction or unusual moments alongside the user's other answers in the transcript or feedback file
+6. Run the post-session profile capture step (see `CLAUDE.md` "Post-session profile capture" section) — populates the multi-page profile, the per-session synthesis at `minutes/`, and initial entries in every change log
 
 ---
 

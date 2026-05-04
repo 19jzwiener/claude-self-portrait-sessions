@@ -30,26 +30,12 @@ secrets.json
 .anthropic/
 .cursor/
 
-# --- User-generated session data (Forward-look) ---
-# When you run a session, Claude creates files with YOUR personal answers.
-# They live in YOUR local clone only — never push.
+# --- User-generated session data ---
+# When you run a session, Claude creates files under users/[your-name]/ with YOUR personal answers.
+# That directory stays on YOUR machine only — never push.
 # Gitignored so a `git add .` won't accidentally stage your private data.
-
-# Top-level user data dirs (post v0.2.0 layout):
-# users/[name]/ holds your multi-page profile. The .template/ + README.md are tracked.
+# The .template/ directory + this README ARE tracked (they're part of the shipped schema).
 users/[a-z]*/
-session-records/[0-9]*/
-
-# Legacy v0.1.0 root paths (still gitignored for backward compatibility on old clones):
-sessions/
-feedback/
-outputs/
-
-# Runtime-internal scratch dirs (anything Claude writes inside the runtime by accident):
-runtime/session-*/sessions/
-runtime/session-*/feedback/
-runtime/session-*/users/
-runtime/session-*/outputs/
 
 # --- Logs ---
 *.log
