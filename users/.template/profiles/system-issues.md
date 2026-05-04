@@ -29,6 +29,3 @@
 
 - When a V[N] script absorbs an issue, move it from "Active" to "Resolved" with the resolution version + brief note.
 - Resolved items can be archived (removed) when the script version is 2+ generations past the resolution.
-
----
-

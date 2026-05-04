@@ -68,6 +68,3 @@
 - Productive nuance vs flinch (do they expand the system's framing or pull back?)
 - Reading-level friction (do they ask, or stay silent?)
 - Generative moves (do they synthesize their own answers, or accept what's offered?)
-
----
-

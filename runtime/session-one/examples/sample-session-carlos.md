@@ -2,7 +2,7 @@
 
 **Date:** 2026-04-16
 **Runner:** Claude (Session Runner)
-**Duration:** ~13 minutes (ran short — user moved fast)
+**Duration:** ~13 minutes (ran significantly short of the 30-45 min target — user moved fast; he's a low-verbosity persona)
 **Context:** Sofia (17, his daughter) asked him to try it. He opened the project after dinner, on the back patio, with a Modelo. Linda inside watching TV.
 
 ---
@@ -11,8 +11,8 @@
 
 - **User first name:** Carlos
 - **Today's date (confirmed):** 2026-04-16
-- **15 minutes uninterrupted?:** "Yeah. Sofia said I should do this thing. *Órale,* let's go."
-- **Teaching dial / mode:** N/A — this is Session 1 V1, not a Life OS session.
+- **30-45 minutes uninterrupted?:** "Yeah. Sofia said I should do this thing. *Órale,* let's go."
+- **Teaching dial / mode:** N/A — Session Runner mode only.
 
 ---
 
@@ -20,8 +20,13 @@
 
 **Runner (verbatim):**
 > Hey. Before we start — this isn't a personality quiz.
-> For the next 15 minutes, you'll answer 6 questions. Some might feel weird. In between the questions and the end, you'll write 3 sentences about yourself. Your own words. Those 3 sentences are the point.
+>
+> The whole thing takes about 30 to 45 minutes. You'll answer 6 questions, then we'll work together to turn your answers into a one-page profile — sentences in your own words, a name for the pattern that throws you off, and one concrete next step. Some questions might feel weird. The 3 sentences you write about yourself are the point.
+>
 > I'm not going to label you. I'm going to ask the right questions in the right order. So you can finally say out loud something you already half-know about yourself.
+>
+> **Feel free to ask questions or ask for more context at any point. If something doesn't land, tell me — we'll work through it together.**
+>
 > Ready?
 
 **Carlos:** "Yeah. Let's go."
@@ -210,9 +215,9 @@
 
 ---
 
-## SCREEN 13 — Archetype Reveal + Gaps
+## SCREEN 13 — Your Name Reveal + Gaps
 
-**Generated archetype:**
+**Generated Your Name:**
 > **The Providing Stranger**
 >
 > The one who shows up for the job, the bills, the punch list — and goes quiet at the door of his own house. Reliable outside, absent inside, both wearing the same face.
@@ -231,7 +236,7 @@
 
 **Carlos:** "That I had an answer for most of this. I thought I wouldn't."
 
-*[Runner note: He kept the archetype — did not rename. "That's harder than the other one" = he felt the weight of the name more than the negative surprise. "I thought I wouldn't" — final line of the session — is a quiet admission that something in him had something to say. Captured verbatim.]*
+*[Runner note: He confirmed the name — did not write reasons-it-feels-off. "That's harder than the other one" = he felt the weight of the name more than the negative surprise. "I thought I wouldn't" — final line of the session — is a quiet admission that something in him had something to say. Captured verbatim.]*
 
 ---
 
@@ -249,7 +254,7 @@
 
 ## The Providing Stranger
 
-*(you can keep it, change it, or say no to it)*
+*(the name we're starting with — does this sound right? if not, write what feels off and we'll talk about it next session)*
 
 ### Your Sentences
 > I come alive when the job is done right and everybody on the crew got what they were supposed to get.
@@ -291,7 +296,7 @@ Your biggest strength — running the crew so everybody gets what they were supp
 
 - **[2026-04-16] Screen 1 — Audible scoff at "Creativity."** User muttered "creativity, pfft." Asked "what counts as play? Like a hobby?" Did not pick Play or Purpose. The menu has a demographic skew — a 48-year-old construction foreman does not see his life through these categories. Consider: are "Work / Family / Health / Money" enough? Is the script implicitly coaching him toward more domains than he actually cares about? Future design question: domain menu might need fewer options, or option weights by life-stage.
 
-- **[2026-04-16] Screen 2 — User gave 4-word peak moment on first pass.** "Finishing the Arrowhead job on time last year. Crew worked hard. Came in under budget. Felt good." Got one more sentence after the single allowed prompt. The script's "3 to 5 sentences" microcopy is aspirational for this user. He does not romanticize. The data is still usable — "everybody got their bonus" became the anchor for signature and archetype — but Future design question: can Screen 2 work with 20 words instead of 100? The answer is yes, but the current microcopy implies otherwise, which may make low-verbosity users feel they're failing.
+- **[2026-04-16] Screen 2 — User gave 4-word peak moment on first pass.** "Finishing the Arrowhead job on time last year. Crew worked hard. Came in under budget. Felt good." Got one more sentence after the single allowed prompt. The script's "3 to 5 sentences" microcopy is aspirational for this user. He does not romanticize. The data is still usable — "everybody got their bonus" became the anchor for the signature sentences and Your Name — but Future design question: can Screen 2 work with 20 words instead of 100? The answer is yes, but the current microcopy implies otherwise, which may make low-verbosity users feel they're failing.
 
 - **[2026-04-16] Screen 4 — THE MAIN STRESS TEST. "Pretend it's a character" triggered verbal resistance.** "*Chingado.* What is this, a cartoon?" He genuinely thought the framing was stupid. Had to be coached twice — once to get the pattern content (tiredness at 5 p.m.), once more to extract a name ("El Viejo"). **The character is flat** — no voice, no internal monologue, no villainous traits. It is functionally a label for a state ("I come home tired and go quiet"). But the leak sentences in Screen 8 were real — he could say what El Viejo does to him. The name-the-character step added maybe 30 seconds of friction but did not break the session. **Design insight:** for low-Openness, low-abstraction users, "pretend it's a character" is the highest-friction moment in the script. Future design options:
   1. Soften the framing: "Some people find it useful to give this pattern a name — want to try, or skip?"
@@ -302,9 +307,9 @@ Your biggest strength — running the crew so everybody gets what they were supp
 
 - **[2026-04-16] Screen 12 — Negative surprise LANDED, quietly.** User put the beer down. Paused 15 seconds. Said "Huh" and then "Yeah. Okay." That is the maximum emotional reaction this persona gives. The flat affect hid real impact — the "huh + beer down" is the flinch. Capturing emotional signal on low-affect personas requires attending to non-verbal/behavioral cues (pause length, physical gestures) not verbal intensity. Future design question: if this were delivered via web UI instead of live voice, we lose the behavioral signal. How do we know it landed? (One option: a 1-5 slider after the surprise — "how much of this did you already know?" — would give proxy data.)
 
-- **[2026-04-16] Screen 13 — Archetype landed harder than negative surprise.** "The Providing Stranger" got a "*chingado*" and a re-read. He said "that's harder than the other one." Meaning: the archetype name did more work than the surprise sentence. This is surprising — the script treats the archetype as a handle and the surprise as the punch. For this user, the reverse happened. **Design insight:** the archetype might be doing heavier lifting than Screen 12 in the current design. Future design question: does archetype actually BELONG in the compound-hook phase, or does it deserve its own beat with more air around it?
+- **[2026-04-16] Screen 13 — Your Name landed harder than negative surprise.** "The Providing Stranger" got a "*chingado*" and a re-read. He said "that's harder than the other one." Meaning: the Your Name handle did more work than the surprise sentence. This is surprising — the script treats Your Name as a handle and the surprise as the punch. For this user, the reverse happened. **Design insight:** Your Name might be doing heavier lifting than Screen 12 in the current design. Future design question: does Your Name actually BELONG in the compound-hook phase, or does it deserve its own beat with more air around it?
 
-- **[2026-04-16] Session duration — ran ~13 minutes, not 15.** User moved fast, did not linger. Time budget held. Future design question: low-verbosity users will finish ahead of schedule. Is there a backstop (e.g., a single "anything else" question) if time remains?
+- **[2026-04-16] Session duration — ran ~13 minutes, far below the 30-45 min target.** User moved fast, did not linger. Future design question: low-verbosity users will finish significantly ahead of schedule. Is there a backstop (e.g., a single "anything else" question) if time remains, or is finishing in 13 min just the right outcome for this persona?
 
 ### What worked
 
@@ -326,13 +331,13 @@ Your biggest strength — running the crew so everybody gets what they were supp
 - **Vectors (Screen 9):** Used his vocabulary ("crew," "Hector," "simpler life," "Saturday," "kid," "breakfast"). Each tied to different Phase A data. Option 3 was the strongest; Options 1 and 2 felt like coaching to him. Mixed success.
 - **First move (Screen 10):** 15-min, shippable (a text), observable (either he sent it or didn't), above current skill (he doesn't currently schedule these). PASS.
 - **Negative surprise (Screen 12):** Used "El Viejo" + "the crew" + "everybody got what they were supposed to get" + "dinner table." Specific to his data. Did NOT soften. PASS.
-- **Archetype (Screen 13):** "The Providing Stranger" — 3 words, captures signature (providing) + leak (strange in his own house). He kept it. PASS with strong result.
+- **Your Name (Screen 13):** "The Providing Stranger" — 3 words, captures signature (providing) + leak (strange in his own house). He confirmed it. PASS with strong result.
 - **Gap questions (Screen 13):** 3 questions, each references his data (El Viejo, Hector, Sofia, chapter title). Each is open and specific. PASS.
 
 ### User-type flag
 
 Carlos represents a **low-Openness, low-SI-appetite, high-Conscientiousness** user. Likely 20-30% of the addressable market for a tool like this. Key design tensions for this segment:
-- Abstractions (characters, archetypes) feel like therapy. "Pretend it's a character" is the riskiest screen.
+- Abstractions (characters, named patterns) feel like therapy. "Pretend it's a character" is the riskiest screen.
 - Short answers are the norm. Microcopy implying long answers may cause quiet friction.
 - Prescriptive vectors ("you should...") get rejected. Vectors that ratify existing working behavior get accepted.
 - Emotional signal is behavioral, not verbal. Product needs to read pauses, not words.

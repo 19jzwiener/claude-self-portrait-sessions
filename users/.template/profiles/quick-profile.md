@@ -44,6 +44,3 @@
 | Date | Session | Raw transcript | Raw feedback | Minutes |
 |------|---------|----------------|--------------|---------|
 | [date] | 1 | [`raw/s01-[date]/transcript.md`](../raw/s01-[date]/transcript.md) | [`raw/s01-[date]/feedback.md`](../raw/s01-[date]/feedback.md) | [`minutes/s01-[date].md`](../minutes/s01-[date].md) |
-
----
-

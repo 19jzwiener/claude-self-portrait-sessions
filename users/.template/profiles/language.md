@@ -28,6 +28,3 @@
 - Terms not appearing in 3+ consecutive sessions can move to a "historical vocabulary" footer or be removed.
 - New terms added with first-seen reference for traceability.
 - Runner adds new terms in post-session pass.
-
----
-

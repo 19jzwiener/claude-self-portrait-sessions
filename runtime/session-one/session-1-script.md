@@ -1,6 +1,6 @@
 # Session 1 — Script
 
-> **Time budget:** ~30-45 minutes (real-pilot reality — earlier "15-min" framing was aspirational and broke trust mid-session)
+> **Time budget:** ~30-45 minutes
 > **Outcome:** User walks away with a one-page profile (see `output-template.md`) plus a multi-page profile in `../../users/firstname-lastname/`
 > **Runner:** Read each screen's user-facing content **verbatim**. Do not paraphrase.
 
@@ -18,7 +18,7 @@
 | Phase D — Compound Hook | 3 min | Screens 12-13 |
 | **Total** | **~40 min** | 14 screens |
 
-**Note for runner:** Tell the user up front this takes 30-45 min, not 15 min. Honest framing protects trust when they hit Screen 4 or Screen 12 and need real time to think. Screens 2 and 4 are the big-think screens — let them breathe.
+**Note for runner:** Tell the user up front this takes 30-45 min. Honest framing protects trust when they hit Screen 4 or Screen 12 and need real time to think. Screens 2 and 4 are the big-think screens — let them breathe.
 
 ---
 
@@ -58,7 +58,7 @@
 
 ---
 
-# PHASE A — Intake (6:30)
+# PHASE A — Intake (~25 min)
 
 ## SCREEN 1 — Domain-Naming (60s)
 
@@ -100,7 +100,7 @@
 
 **[User writes ONE peak-moment scene in 3-5 sentences.]**
 
-[RUNNER NOTE: If they list multiple scenes, accept what they wrote (still usable data) but capture the multi-scene response in their transcript. The 30-sec think cue + explicit "ONE moment, not a list" framing exists because real pilots resolved the prompt's ambiguity by writing 5 separate scenes — interpreting "3-5 sentences" as scene-count rather than depth on one scene. If they give a one-line answer, prompt once: "Can you give me a few more details about that ONE scene? Where were you, what were you doing, what did it feel like?" If they refuse or can't, accept what they wrote and move on.]
+[RUNNER NOTE: If they list multiple scenes, accept what they wrote (still usable data) but capture the multi-scene response in their transcript. The 30-sec think cue + explicit "ONE moment, not a list" framing exists because users sometimes interpret "3-5 sentences" as scene-count rather than depth on one scene. If they give a one-line answer, prompt once: "Can you give me a few more details about that ONE scene? Where were you, what were you doing, what did it feel like?" If they refuse or can't, accept what they wrote and move on.]
 
 ---
 
@@ -122,7 +122,7 @@
 
 ## SCREEN 4 — Externalize the Pattern (5-8 min — split into 4a / 4b / 4c)
 
-**[NOTE for runner:** This is the most important — and most cognitively demanding — screen. An earlier single-prompt design failed because pilot users couldn't make the leap from "describe the pattern" to "give it a character" in one move. The current design splits this into 3 micro-steps: the user describes the pattern in their own plain words FIRST, then names it as a character, then the runner reflects the name back tied to the user's plain words to lock shared meaning before any downstream screen reuses the character name. Do NOT offer example character names upfront — that anchors users on the runner's metaphors instead of their own language.**]**
+**[NOTE for runner:** This is the most important — and most cognitively demanding — screen. The 3 micro-step structure exists because the leap from "describe the pattern" to "give it a character" is too big to do in one move. The user describes the pattern in their own plain words FIRST, then names it as a character, then the runner reflects the name back tied to the user's plain words to lock shared meaning before any downstream screen reuses the character name. Do NOT offer example character names upfront — that anchors users on the runner's metaphors instead of their own language.**]**
 
 ---
 
@@ -210,7 +210,7 @@
 
 **[User gives a chapter title.]**
 
-[RUNNER NOTE: An earlier "Last one." framing was tested and rejected — pilot users were relieved thinking the session was nearly done, then 7 more screens followed (bait-and-switch from their POV). "Last question in this first part" is honest: more is coming, but Phase A is closing. Accept their first answer. If they start over-thinking or editing, say: "Your first instinct is the right one. Go with what came first."]
+[RUNNER NOTE: Use "Last question in this first part" — it's honest because more is coming after Phase A. Saying "Last one." (without qualification) creates a relief response, then breaks trust when 7 more screens follow. Accept their first answer. If they start over-thinking or editing, say: "Your first instinct is the right one. Go with what came first."]
 
 ---
 
@@ -222,7 +222,7 @@
 
 **[Brief pause — let them breathe before moving to Reflection (Screen 6.5).]**
 
-[RUNNER NOTE: Phase A is the heaviest cognitive lift in the session — by the end of it, users are tired (real pilots have been visibly cooked at this transition). The bridge line resets expectations for Phase B+ and acknowledges the lift. One sentence. Don't elaborate.]
+[RUNNER NOTE: Phase A is the heaviest cognitive lift in the session — by the end of it, users are tired and often visibly so. The bridge line resets expectations for Phase B+ and acknowledges the lift. One sentence. Don't elaborate.]
 
 ---
 
@@ -261,7 +261,7 @@
 
 ---
 
-# PHASE B — Artifact Generation (4:00) — FRAMES, NOT DRAFTS
+# PHASE B — Artifact Generation (5 min) — FRAMES, NOT DRAFTS
 
 ## SCREEN 7 — Your Signature (90s)
 
@@ -322,11 +322,11 @@
 
 ---
 
-# PHASE C — Commitment (3:00)
+# PHASE C — Commitment (4 min)
 
 ## SCREEN 10 — Habit Stacking (4 min — split into 10a / 10b / 10c)
 
-**[NOTE for runner:** An earlier design packed three asks into one screen (accept first move + pick trigger from menu + assemble IF/THEN). Pilot users couldn't do this without live runner interpretation. The current design splits the screen and reframes around **habit stacking** (Atomic Habits / BJ Fogg shorthand most users have prior exposure to) instead of explaining WOOP from scratch. **This screen ONLY fires for daily-habit cadence options** (per Screen 9 cadence tag). For once-this-week or weekly options, skip 10b habit-stacking entirely and go straight to 10c IF/THEN with a date-based trigger.**]**
+**[NOTE for runner:** This screen splits three asks (accept first move + pick trigger from menu + assemble IF/THEN) into separate sub-steps and reframes around **habit stacking** (Atomic Habits / BJ Fogg shorthand most users have prior exposure to) instead of explaining WOOP from scratch. Combining all three into one prompt is too dense to land without live runner interpretation. **This screen ONLY fires for daily-habit cadence options** (per Screen 9 cadence tag). For once-this-week or weekly options, skip 10b habit-stacking entirely and go straight to 10c IF/THEN with a date-based trigger.**]**
 
 ---
 
@@ -358,7 +358,7 @@
 >
 > **(2) What do you already do around that time that we could stack onto?**
 
-**[User answers both. The trigger comes from her life, not a fixed menu — automatically filters out triggers that don't match the new habit's timing.]**
+**[User answers both. The trigger comes from their life, not a fixed menu — automatically filters out triggers that don't match the new habit's timing.]**
 
 [RUNNER NOTE: An earlier fixed trigger menu (Sunday coffee / Friday laptop close / etc.) was replaced with these two narrowing questions. The fixed menu often didn't fit; users either had to force a fit or write in. The narrowing questions surface a personal trigger every time. **For one-shot or weekly options:** skip 10b entirely. The trigger is a date, not a habit-stack. Go straight to 10c with: "When this week will you do it?"]
 
@@ -433,7 +433,7 @@
 
 ---
 
-# PHASE D — Compound Hook + Your Name Reveal (1:30)
+# PHASE D — Compound Hook + Your Name Reveal (3 min)
 
 ## SCREEN 12 — Your Negative Surprise
 
@@ -491,7 +491,7 @@
 
 → Move to Screen 13b.
 
-[RUNNER NOTE: An earlier design offered "Keep / Say no / Rename" as a 3-option handle response. Current design: users do NOT rename inside Session 1. Reasons-it-feels-off becomes Session 2 input. **Do NOT** offer to retitle on the spot. **Do NOT** suggest alternative names. The user's resistance is data for Session 2, not a problem to solve in Session 1. Capture the reasons verbatim — those are the highest-signal Session 2 inputs you'll get.]
+[RUNNER NOTE: Users do NOT rename Your Name inside Session 1. Reasons-it-feels-off becomes Session 2 input. **Do NOT** offer to retitle on the spot. **Do NOT** suggest alternative names. The user's resistance is data for Session 2, not a problem to solve in Session 1. Capture the reasons verbatim — those are the highest-signal Session 2 inputs you'll get.]
 
 ---
 

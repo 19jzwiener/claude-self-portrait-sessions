@@ -46,6 +46,3 @@
 ## Time-of-day patterns
 
 [When things go well vs poorly. Morning vs evening. Bedtime patterns. Late-night escape paths. Their own naming of when they're at their best vs worst.]
-
----
-

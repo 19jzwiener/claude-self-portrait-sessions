@@ -2,7 +2,7 @@
 
 > The one-page profile the user walks away with. Copy this template into the session file and fill each field with the user's data + your generated content.
 >
-> **Naming notes:** "Artifact" is dropped from user-facing copy — pilot users didn't know the word; user-facing copy uses "profile" or "profile page." The 3-5 word handle is **"Your Name"** — and users do NOT rename it in Session 1; if it doesn't land, the user writes reasons it feels off, and those reasons become Session 2 input (see Screen 13 in `session-1-script.md`).
+> **Naming notes:** "Artifact" is dropped from user-facing copy — users may not know the word; user-facing copy uses "profile" or "profile page." The 3-5 word handle is **"Your Name"** — and users do NOT rename it in Session 1; if it doesn't land, the user writes reasons it feels off, and those reasons become Session 2 input (see Screen 13 in `session-1-script.md`).
 
 ---
 
@@ -15,14 +15,14 @@
 │   reasons it feels off; we'll work on it in S2)   │
 │                                                   │
 │  YOUR SENTENCES                                   │
-│  "I come alive when [user's Screen 7 answer]."   │
-│  "I drift when [user's Screen 7 answer]."        │
+│  "I come alive when [Screen 7 alive sentence]."  │
+│  "I drift when [Screen 7 drift sentence]."       │
 │                                                   │
 │  YOUR PATTERN — [character name from Screen 4]    │
 │  "[Character] does this to me:                    │
-│   [user's Screen 8 answer]."                      │
+│   [Screen 8a — what character does to them]."    │
 │  "[Character] loses power when                    │
-│   [user's Screen 8 answer]."                      │
+│   [Screen 8b — when character loses power]."     │
 │                                                   │
 │  YOUR NEXT STEP                                   │
 │  [Chosen path from Screen 9 — title + 1 line]    │
@@ -64,14 +64,14 @@
 *(does this sound right? — if it doesn't quite hit, write down the reasons it feels off and we'll figure out a better fit in Session 2)*
 
 ### Your Sentences
-> I come alive when [user's Screen 7 answer].
+> I come alive when [Screen 7 — user's alive sentence].
 >
-> I drift when [user's Screen 7 answer].
+> I drift when [Screen 7 — user's drift sentence].
 
 ### Your Pattern — [character name from Screen 4]
-> [Character] does this to me: [user's Screen 8 answer].
+> [Character] does this to me: [Screen 8a — user's words for what the character does to them].
 >
-> [Character] loses power when [user's Screen 8 answer].
+> [Character] loses power when [Screen 8b — user's words for when the character loses power].
 
 ### Your Next Step
 **[Chosen path title from Screen 9]** — [1-line description]

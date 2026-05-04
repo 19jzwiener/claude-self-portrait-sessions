@@ -6,14 +6,14 @@
 
 ## The 4 Generated Fields
 
-1. **Three Directions (3)** — Screen 9, Phase B *(V1 called these "Vector Options" — user-facing language now uses "directions/paths/options"; "vector" stays internal only)*
+1. **Three Directions (3)** — Screen 9, Phase B (referred to internally as "vectors"; user-facing language uses "directions/paths/options")
 2. **Flow-Sized First Move** — Screen 10, Phase C
 3. **Negative Surprise** — Screen 12, Phase D
 4. **Your Name + 3 Gap Questions** — Screen 13, Phase D
 
 ---
 
-## 1. Three Directions (3) — Screen 9 *(V2)*
+## 1. Three Directions (3) — Screen 9
 
 ### Input data used
 - Screen 3 answer (envy — broad list + the one-they-narrowed-to)
@@ -22,21 +22,21 @@
 - Screen 5 answer (Sunday-night gut behavior)
 - **Screens 2 + 4 + 5 ALSO used as a "what they're already doing" filter** — see filter rule below
 
-### Output format (V2)
+### Output format
 
 Each option is:
 ```
 **Option [N] — [Plain-action title, no metaphor] ([cadence — daily habit / once this week / weekly]):** [1-2 sentence direction + concrete first move]
 ```
 
-**V2 changes from V1 output format:**
-- Title MUST be plain action, NOT metaphorical (V1 example "Eat One Meal On Your Own Side" → V2 example "Eat one meal without judging yourself")
+**Format requirements:**
+- Title MUST be plain action, NOT metaphorical (e.g. "Eat one meal without judging yourself" — not "Eat One Meal On Your Own Side")
 - Cadence tag REQUIRED in the title parens — daily habit / once this week / weekly
 - "Vector" never appears in user-facing output
 
 ### How to derive each option
 
-**Option 1 — derived from envy (treat envy as DIRECTION SIGNAL, not action signal).** *V2 rule:* Envy data is a clue about what quality the user wishes they had — translate the direction into a repeatable practice that teaches the underlying freedom, not a one-shot mimicry of the envied person's surface behavior.
+**Option 1 — derived from envy (treat envy as DIRECTION SIGNAL, not action signal).** Envy data is a clue about what quality the user wishes they had — translate the direction into a repeatable practice that teaches the underlying freedom, not a one-shot mimicry of the envied person's surface behavior.
 
 - Ask: *What specifically did they envy?* (quality, behavior, visibility, freedom, craft, etc.)
 - Ask: *What is the underlying freedom or quality that creates that?*
@@ -55,16 +55,16 @@ Each option is:
 - Ask: *What's a trigger or rule that creates more of that condition?*
 - Name the direction with a plain-action title.
 
-### V2 generation rule — FILTER overlapping behaviors
+### Generation rule — FILTER overlapping behaviors
 
-**Before delivering, check each option against Screens 2 + 4 + 5 data.** If an option overlaps with what the user is already doing, **regenerate it.** Options must STRETCH, not CONFIRM. (Earlier designs sometimes generated an option the user was already doing most days, which became the "easy pick" under fatigue and produced session output of "keep doing what you're doing" — no forward motion.)
+**Before delivering, check each option against Screens 2 + 4 + 5 data.** If an option overlaps with what the user is already doing, **regenerate it.** Options must STRETCH, not CONFIRM. An option the user is already doing most days becomes the "easy pick" under fatigue and produces session output of "keep doing what you're doing" — no forward motion.
 
 Specifically:
 - Does any element of the proposed option appear in Screen 2's peak-moment scene? → too close, regenerate
 - Does any element appear in Screen 4's "less hold" condition? → too close (they already access it), regenerate
 - Does any element appear in Screen 5's Sunday-night default? → confirms current behavior, regenerate
 
-### V2 generation rule — PREFER daily-habit options when data supports both
+### Generation rule — PREFER daily-habit options when data supports both
 
 When the user's data could support either a daily habit or a one-shot, **default to the daily habit.** Habits compound; one-shots don't. Envy data skews toward one-shots by construction (the envied person did THE THING ONCE-VISIBLE) — Option 1 most often violates this rule and should be the most carefully reviewed against the envy-as-direction-signal rule above.
 
@@ -135,7 +135,7 @@ Cadence determination per option:
 - Screen 2 peak-moment scene (for concrete user-examples)
 - Screen 4a plain-words pattern description (the user's own non-metaphorical language)
 
-### V2 Default Template — use FIRST, not as fallback
+### Default Template — use FIRST, not as fallback
 
 ```
 [Concrete user-example A from Screen 2 or peak-moment data]. [Concrete user-example B from Screen 4 or leak data].
@@ -157,7 +157,7 @@ One [verb that names what A does — fills you, lights you, etc.]. The other jus
 
 **(E) Max length: ~4 sentences.**
 
-### Forbidden patterns (from failed V1 drafts)
+### Forbidden patterns
 
 These specific phrasings are banned from V2:
 
@@ -179,7 +179,7 @@ The runner must be able to explain the surprise in plain words to an outsider. I
 
 ### Example — failed draft vs. landing template
 
-**Failed (abstract-mechanism — pilot user couldn't parse, runner couldn't explain):**
+**Failed (abstract-mechanism — too hard to parse, runner couldn't explain it cleanly):**
 > "Your biggest strength — engaging deeply when others bring energy — is indistinguishable from The Hamster in a Wheel from the inside. Real presence and pure escape feel identical while you're in the state."
 
 **Landed (concrete-noun contrast — same user, third pass):**
@@ -232,9 +232,9 @@ e.g. "The Quiet Builder," "The Rehearsing Starter," "The Hidden Operator"
 1. **It's a HANDLE, not a verdict.** The user confirms it lands or writes reasons it feels off (no rename inside this session). Do not write it as if final. The reasons-it-feels-off become Session 2 input instead. See Screen 13 in `session-1-script.md` for the 13a flow.
 2. **3-5 words max.** Short enough to hold in one breath.
 3. **Captures the tension, not just the strength.** A good Your Name reveals the interplay between their signature AND leak, not one or the other.
-4. **Uses a qualifier that's specific, not generic.** "The Undeclared Builder" beats "The Builder." "The Rehearsing Starter" beats "The Beginner."
+4. **Uses a qualifier that's specific, not generic.** "The Providing Stranger" beats "The Provider." "The Rehearsing Starter" beats "The Beginner."
 5. **Barnum-calibrated.** Sticky enough that they'll remember it. Specific enough that it couldn't apply to 80% of people.
-6. **(V2 generation implication of no-rename rule)** Calibrate slightly more conservatively than V1 — since the user can't reshape the name on the spot, the runner-generated version needs to be solid enough to land for ~70%+ of users on first read OR clearly invite reasons-it-feels-off (which is also valuable Session 2 data). Avoid hyper-clever names that nail it for 30% and feel weird to 70%.
+6. **(Generation implication of the no-rename rule)** Calibrate conservatively — since the user can't reshape the name on the spot, the runner-generated version needs to be solid enough to land for ~70%+ of users on first read OR clearly invite reasons-it-feels-off (which is also valuable Session 2 data). Avoid hyper-clever names that nail it for 30% and feel weird to 70%.
 
 #### Construction method
 
@@ -318,17 +318,17 @@ Do not:
 
 ## Calibration examples — good vs. bad
 
-### Three Directions (Screen 9) — V2 calibration
+### Three Directions (Screen 9) — calibration
 
 **BAD V1-style (generic title, no cadence, no filter against existing behavior):**
 > Option 1 — Creative Output: Share your work more publicly this week.
 
-**BAD V2 (metaphor title, no cadence tag):**
+**BAD (metaphor title, no cadence tag):**
 > Option 1 — Public Shipping: Post one markdown note or screenshot of work-in-progress to a place at least one person you respect will see it.
 >
 > *(Why banned in V2: "Public Shipping" is a metaphor; user has to decode what it means before deciding. No cadence tag.)*
 
-**GOOD V2 (plain-action title + cadence + filtered against existing behavior):**
+**GOOD (plain-action title + cadence + filtered against existing behavior):**
 > Option 1 — Post one work-in-progress screenshot publicly (once this week — one post): Pick one piece of work you've already started — a markdown note, a screenshot, a half-built thing — and put it somewhere at least one person you respect will see it. Doesn't matter what; just that it has your name on it.
 >
 > *(Why this lands: title describes the action directly — "Post one work-in-progress screenshot publicly" — no decoding needed. Cadence tagged: "once this week — one post." First-move is concrete. The user can't already be doing this if Screen 5 didn't surface "I share my work publicly" as their Sunday-night default.)*
@@ -358,9 +358,9 @@ Do not:
 > The Creative
 
 **GOOD (specific):**
-> The Undeclared Builder
+> The Providing Stranger
 
-(The qualifier "Undeclared" captures their leak — not publicly claiming what they already do — while "Builder" captures their signature. 3 words, couldn't apply to most people.)
+(The qualifier "Providing" captures their strength — they give consistently to crew and family — while "Stranger" captures the leak: present for everyone but never landing in their own skin. 3 words, couldn't apply to most people.)
 
 ---
 
@@ -370,6 +370,6 @@ Do not:
 > - What are your core values?
 
 **GOOD (specific):**
-> - Does The Collector only show up in your work, or does he also run your relationships and play?
-> - You named your brother as your amplifier. Who else amplifies you — and who drains you?
-> - Your envy pointed at public shippers — is that really about attention, or about being SEEN BUILDING? Those are different.
+> - Does El Viejo only show up at home, or does he also run your work decisions when you're tired?
+> - You named your foreman as the one person who pushes back when you're wrong. Who else pushes back — and who never does?
+> - Your envy pointed at men who chose family time over a bigger paycheck — is that really about the time itself, or about being PRESENT when you're there? Those are different.
